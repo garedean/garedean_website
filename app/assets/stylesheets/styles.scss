@@ -1,0 +1,258 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 150px;
+  height: 100vh;
+  border-right: 1px solid #e3e3e3;
+  float: left;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.page-header {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.content-container {
+  margin-left: 150px;
+  padding-top: 40px;
+  height: 100%;
+}
+
+.article {
+  text-align: justify;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.link-list {
+  padding-left: 20px;
+}
+
+.link-list li {
+  list-style-type: none;
+  line-height: 30px;
+  margin-left: 0;
+}
+
+.gravatar {
+  height: 110px;
+  display: block;
+  margin: 30px auto 50px auto;
+  border-radius: 100%;
+}
+
+.project-list {
+  list-style-type: none;
+  margin: 0;
+  text-align: justify;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+}
+
+.project-list li {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 10px;
+}
+
+.project-list li:nth-child(n + 1) {
+  padding-top: 10px;
+}
+
+a:hover {
+  color: #337ab7;
+  text-decoration: none;
+  background: #eee;
+}
+
+.fixed-column {
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  line-height: 1.5em;
+  color: #444;
+}
+
+/* Landing Page */
+/* ---------------------------------------------*/
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url("images/woods_bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.name-stamp {
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+  font-size: 75px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.clip-circle {
+  height: 100%;
+  background: white;
+  -webkit-clip-path: circle(23px at left 35px top 35px);
+}
+
+.clip-circle.expanded {
+  -webkit-clip-path: circle(150% at left 35px top 35px);
+  -webkit-transition: all 600ms cubic-bezier(0.680, 0.220, 0.820, 0.315);
+   -moz-transition: all 600ms cubic-bezier(0.680, 0.220, 0.820, 0.315);
+     -o-transition: all 600ms cubic-bezier(0.680, 0.220, 0.820, 0.315);
+        transition: all 600ms cubic-bezier(0.680, 0.220, 0.820, 0.315); /* custom */
+
+  -webkit-transition-timing-function: cubic-bezier(0.680, 0.220, 0.820, 0.315);
+     -moz-transition-timing-function: cubic-bezier(0.680, 0.220, 0.820, 0.315);
+       -o-transition-timing-function: cubic-bezier(0.680, 0.220, 0.820, 0.315);
+          transition-timing-function: cubic-bezier(0.680, 0.220, 0.820, 0.315); /* custom */
+}
+
+.glyphicon-menu-hamburger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px;
+  font-size: 20px;
+  color: #555;
+  z-index: 2;
+}
+
+.glyphicon-menu-hamburger:hover {
+  cursor: pointer;
+  color: #333;
+}
+
+.landing-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.lead {
+  color: white;
+  position: absolute;
+  right: 0px;
+}
+
+.x-small {
+  font-size: .7em;
+}
+
+a.buttonize {
+  border: 1px solid #337ab7;
+  padding: 2px 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.fixed-column {
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    a.new {
+      margin-right: 10px;
+    }
+  }
+}
+
+input[type="submit"] {
+  font-size: 1.2em;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(255, 255, 255, .93);
+}
+
+.large {
+    font-size: 2em;
+}
+
+.project-list {
+  > li {
+    position: relative;
+    .overlay {
+      display: none;
+    }
+    &:hover .overlay {
+      display: block;
+      cursor: pointer;
+
+      .absolutely-centered {
+        position: absolute;
+        display: inline-block;
+        top: 0; right: 0; bottom: 0; left: 0;
+        margin: auto;
+        width: 200px;
+        height: 36px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.edit-delete-wrapper {
+  a {
+    font-weight: bold;
+    opacity: initial;
+    &:hover {
+      background: none;
+    }
+  }
+  .edit {
+    color: #84afd3;
+    &:hover {
+      color: #337ab7;
+    }
+  }
+  .delete {
+    color: #cb8e8d;
+    &:hover {
+      color: #a94442;
+    }
+  }
+  .go-to {
+    color: #8aac8a;
+    &:hover {
+      color: #3c763d;
+    }
+  }
+}
+
+textarea.form-control {
+  height: 250px;
+}
+/* Media Queries */
+/* ---------------------------------------------*/
+
+@media (min-width: 768px) {
+  .fixed-column {
+    width: 600px;
+  }
+}

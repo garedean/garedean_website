@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render 'layouts/sidebar' %>
+
+  <div class="content-container">
+    <div class="fixed-column">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

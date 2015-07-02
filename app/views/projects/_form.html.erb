@@ -1,0 +1,9 @@
+<%= bootstrap_form_for @project do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.text_area :description %>
+
+  <%= f.text_field :url, help: "Must be full url: https://www.google.com" %>
+
+  <%= f.primary "Add" %>
+<% end %>
