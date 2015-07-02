@@ -93,7 +93,7 @@ a:hover {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url("images/woods_bg.jpg") no-repeat;
+  background: url("woods_bg.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -109,7 +109,7 @@ a:hover {
 .clip-circle {
   height: 100%;
   background: white;
-  -webkit-clip-path: circle(23px at left 35px top 35px);
+  -webkit-clip-path: circle(21px at left 35px top 35px);
 }
 
 .clip-circle.expanded {
@@ -147,11 +147,11 @@ a:hover {
   height: 100%;
 }
 
-.lead {
-  color: white;
-  position: absolute;
-  right: 0px;
-}
+// .lead {
+//   color: white;
+//   position: absolute;
+//   right: 0px;
+// }
 
 .x-small {
   font-size: .7em;

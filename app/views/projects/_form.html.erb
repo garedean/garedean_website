@@ -5,5 +5,5 @@
 
   <%= f.text_field :url, help: "Must be full url: https://www.google.com" %>
 
-  <%= f.primary "Add" %>
+  <%= f.primary yield(:submit_text) %>
 <% end %>

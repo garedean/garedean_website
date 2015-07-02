@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortfolioRails</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <style>
+
+      .backdrop {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+      }
+
+      .hero-wrapper h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4em;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        font-weight: bold;
+      }
+
+      @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      .navbar {
+        display: none;
+        background: transparent;
+      }
+
+      .overlay {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: url("/assets/screen_overlay.png") repeat rgba(0,0,0,0.2);
+        height: 100%;
+      }
+
+      .lead {
+        margin-top: 20px;
+      }
+
+      .hero-wrapper {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        max-height: 400px;
+        max-width: 800px;
+        -webkit-animation: fadein 1.5s;
+           -moz-animation: fadein 1.5s;
+            -ms-animation: fadein 1.5s;
+             -o-animation: fadein 1.5s;
+                animation: fadein 1.5s;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="backdrop container">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 hero-wrapper">
+        <h1>GARRETT OLSON ―</h1>
+
+        <i class="lead">
+          I am Garrett Olson, a California-born web developer and designer currently based in Portland. Sriracha readymade cardigan craft beer pickled. Blog aesthetic meggings, hoodie gastropub hella vegan authentic Bushwick pickled.
+        </i>
+      </div>
+    </div>
+  </div>
+
+  <div class="clip-circle">
+
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+
+    <%= render "layouts/sidebar" %>
+
+    <div class="content-container">
+      <div class="fixed-column">
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  </body>
+</html>

@@ -1,7 +1,5 @@
 class StaticPagesController < ApplicationController
-  def blog
-  end
-
-  def projects
+  def landing_page
+    render :layout => 'layouts/landing_layout'
   end
 end
