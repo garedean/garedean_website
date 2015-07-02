@@ -1,19 +1,20 @@
 The Garedean Portfolio site
 
+
 Note to the instructor:
-#------------------------
+-----------------------
 
-Note: at the expense of lower marks for the assessment, I decided to use a different layout for my portfolio site. My version doesn't have multiple layers (skills with nested projects then nested details): that seemed very click-heavy to me, and I want a prospective employer to be able to see all of the main points on a single page.
+Note: at the expense of lower marks for the assessment, I decided to use a different layout for my portfolio site. My version doesn't have multiple layers (skills with nested projects then nested details): that seemed very click-heavy to me, and I want a prospective employer to be able to see all of the main points on a single page. Since my version had more limited functionality, I spent much of the time on styling and UI.
 
-My version has a 'Projects page' with CRUD functionality. Descriptions of the projects will include a summary of the technologies used.
+My version has a 'Projects page' with CRUD functionality. My plan is to simply nest technologies used during development in the description of each project.
 
 ABOUT
-#------------------------
+-----------------------
 
 This is my person portfolio site! It's currently small, but functionality is being built out slowly but surely.
 
 SET UP
-#------------------------
+-----------------------
 
 1. Once cloned onto a local machine, navigate to its path in your terminal
 2. Start a PostGreSQL server
