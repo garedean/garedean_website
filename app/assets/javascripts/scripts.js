@@ -10,4 +10,7 @@ $(function() {
   $(".clip-circle").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
     window.location.replace("/home");
   });
+
+
+  $(".flash").delay(500).fadeOut(1500);
 });

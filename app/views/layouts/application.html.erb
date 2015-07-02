@@ -8,6 +8,14 @@
 </head>
 <body>
 
+  <div class="flash-wrapper">
+    <% if flash[:notice] %>
+    <p class="flash">
+      <%= flash[:notice] %>
+    </p>
+    <% end %>
+  </div>
+
   <%= render 'layouts/sidebar' %>
 
   <div class="content-container">

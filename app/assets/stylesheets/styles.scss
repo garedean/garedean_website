@@ -25,7 +25,7 @@ nav {
 
 .content-container {
   margin-left: 150px;
-  padding-top: 40px;
+  padding-top: 30px;
   height: 100%;
 }
 
@@ -248,6 +248,23 @@ input[type="submit"] {
 textarea.form-control {
   height: 250px;
 }
+
+.flash-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.flash {
+  background: #C1FFC1;
+  text-align: center;
+  height: 30px;
+  margin: 0;
+  line-height: 30px;
+}
+
 /* Media Queries */
 /* ---------------------------------------------*/
 
