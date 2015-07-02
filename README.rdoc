@@ -1,28 +1,25 @@
-== README
+The Garedean Portfolio site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Note to the instructor:
+#------------------------
 
-Things you may want to cover:
+Note: at the expense of lower marks for the assessment, I decided to use a different layout for my portfolio site. My version doesn't have multiple layers (skills with nested projects then nested details): that seemed very click-heavy to me, and I want a prospective employer to be able to see all of the main points on a single page.
 
-* Ruby version
+My version has a 'Projects page' with CRUD functionality. Descriptions of the projects will include a summary of the technologies used.
 
-* System dependencies
+ABOUT
+#------------------------
 
-* Configuration
+This is my person portfolio site! It's currently small, but functionality is being built out slowly but surely.
 
-* Database creation
+SET UP
+#------------------------
 
-* Database initialization
+1. Once cloned onto a local machine, navigate to its path in your terminal
+2. Start a PostGreSQL server
+3. Terminal:'rake db:create'
+4. Terminal:'rake db:test:prepare'
+5. Terminal:'rake db:migrate'
+6. To run the app, in the terminal, type "rails server" then hit "enter"
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Note: the home root goes to a landing page. In order to get to the page that this assessment was for, you can navigate to localhost:3000/projects
