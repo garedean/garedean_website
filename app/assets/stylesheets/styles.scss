@@ -9,10 +9,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-body {
-  padding-left: 150px;
-}
-
 nav {
   position: fixed;
   left: 0;
@@ -29,6 +25,7 @@ nav {
 
 .content-container {
   height: 100%;
+  margin-left: 150px;
   padding-top: 30px;
   overflow: auto;
 }
@@ -113,7 +110,7 @@ a:hover {
 .clip-circle {
   height: 100%;
   background: white;
-  -webkit-clip-path: circle(21px at left 35px top 35px);
+  -webkit-clip-path: circle(19px at left 35px top 35px);
 }
 
 .clip-circle.expanded {
@@ -172,14 +169,13 @@ a.buttonize {
   border-radius: 20px;
 }
 
-.fixed-column {
-  footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    a.new {
-      margin-right: 10px;
-    }
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: white;
+  a.new {
+    margin-right: 10px;
   }
 }
 
@@ -270,6 +266,7 @@ textarea.form-control {
   margin: 0;
   line-height: 30px;
 }
+
 
 /* Media Queries */
 /* ---------------------------------------------*/

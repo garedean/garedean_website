@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
+  #layout "layouts/centered_column_layout"
+
   def index
     @projects = Project.all
-    render layout: "layouts/projects_stretch"
   end
 
   def new

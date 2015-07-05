@@ -29,13 +29,11 @@
         </span>
       </div>
 
-
       <%= link_to "#{project.name}:", project.url, target: "_blank" %>
       <%= project.description %>
     </li>
   <% end %>
 </ul>
-
 
 <footer>
   <%= link_to "Add Project", new_project_path, class: "buttonize" %>
