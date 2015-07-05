@@ -3,7 +3,7 @@
 
   <%= f.text_area :description %>
 
-  <%= f.url_field :url, help: "Must be full url: https://www.google.com" %>
+  <%= f.text_field :url, prepend: "http://www." %>
 
   <%= f.primary yield(:submit_text) %>
 <% end %>
