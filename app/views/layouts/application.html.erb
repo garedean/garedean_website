@@ -18,11 +18,7 @@
 
   <%= render 'layouts/sidebar' %>
 
-  <div class="content-container">
-    <div class="fixed-column">
-      <%= yield %>
-    </div>
-  </div>
+  <%= content_for?(:content) ? yield(:content) : yield %>
 
 </body>
 </html>

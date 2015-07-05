@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
+    render layout: "layouts/projects_stretch"
   end
 
   def new

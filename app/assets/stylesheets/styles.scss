@@ -9,12 +9,16 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body {
+  padding-left: 150px;
+}
+
 nav {
   position: fixed;
+  left: 0;
   width: 150px;
   height: 100vh;
   border-right: 1px solid #e3e3e3;
-  float: left;
   padding-top: 20px;
   font-size: 18px;
 }
@@ -24,9 +28,9 @@ nav {
 }
 
 .content-container {
-  margin-left: 150px;
-  padding-top: 30px;
   height: 100%;
+  padding-top: 30px;
+  overflow: auto;
 }
 
 .article {

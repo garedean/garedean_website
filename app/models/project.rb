@@ -11,6 +11,6 @@ class Project < ActiveRecord::Base
   end
 
   def prepend_url
-    self.url = "http://www.#{url}"
+    self.url = "http://#{url}"
   end
 end
