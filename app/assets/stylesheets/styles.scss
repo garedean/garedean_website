@@ -65,7 +65,7 @@ nav {
   li {
     border-bottom: 1px solid #e3e3e3;
     &:hover {
-      background: #eee;
+      background: #fafafa;
       cursor: default;
     }
   }
@@ -156,12 +156,6 @@ a:hover {
   height: 100%;
 }
 
-// .lead {
-//   color: white;
-//   position: absolute;
-//   right: 0px;
-// }
-
 .x-small {
   font-size: .7em;
 }
@@ -191,13 +185,6 @@ input[type="submit"] {
   border-radius: 20px;
 }
 
-.overlay {
-  display: none;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background: rgba(255, 255, 255, .93);
-}
-
 .large {
     font-size: 2em;
 }
@@ -208,18 +195,12 @@ input[type="submit"] {
     .overlay {
       display: none;
     }
-    &:hover .overlay {
-      display: block;
-      cursor: pointer;
-
-      .absolutely-centered {
-        position: absolute;
-        display: inline-block;
-        top: 0; right: 0; bottom: 0; left: 0;
-        margin: auto;
-        width: 200px;
-        height: 36px;
-        text-align: center;
+    .edit-delete-wrapper {
+      visibility: hidden;
+    }
+    &:hover {
+      .edit-delete-wrapper {
+        visibility: visible;
       }
     }
   }
