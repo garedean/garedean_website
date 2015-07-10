@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pry', :require => 'pry'
 gem 'bootstrap_form'
+gem 'devise', '~> 3.5.1'
 
 group :development do
   gem 'byebug'
