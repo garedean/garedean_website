@@ -10,9 +10,11 @@
 
 <h4>Comments (<%= @comments.size %>)</h4>
 
-<%= bootstrap_form_for [@blog, @comment] do |f| %>
-  <%= f.text_area :text, hide_label: true, placeholder: "Add a comment" %>
-  <%= f.primary "Add" %>
+<% if current_user %>
+  <%= bootstrap_form_for [@blog, @comment] do |f| %>
+    <%= f.text_area :text, hide_label: true, placeholder: "Add a comment" %>
+    <%= f.primary "Add" %>
+  <% end %>
 <% end %>
 
 <div class="blog-comments-wrapper">
