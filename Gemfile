@@ -27,6 +27,7 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara', '~> 2.4.4'
+  gem 'simplecov', require: false
 end
 
 ruby "2.2.0"

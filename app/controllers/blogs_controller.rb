@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :verify_is_admin, except: [:index]
+  before_action :verify_is_admin, except: [:index, :show]
 
   def index
     @blogs = Blog.all
@@ -12,9 +12,10 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
+      flash[:notice] = "Post added!"
       redirect_to blogs_path
     else
-      redirect_to :back
+      render :new
     end
   end
 

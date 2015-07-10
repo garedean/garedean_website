@@ -2,4 +2,6 @@
   <h1 class="page-heading text-center">New Blog Post</h1>
 </header>
 
-<%= render "form" %>
+<% content_for(:submit_text, "Add") %>
+
+<%= render "blogs/form" %>

@@ -3,13 +3,14 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user = User.find(current_user.id)
     @blog = Blog.find(params[:blog_id])
+    @comments = @blog.comments.all
 
     if @comment.save
       @blog.comments.push(@comment)
+      redirect_to :back
     else
-      flash[:notice] = "Something went wrong... Try again"
+      render "blogs/show"
     end
-    redirect_to :back
   end
 
   def destroy

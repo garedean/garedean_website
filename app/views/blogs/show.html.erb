@@ -12,11 +12,11 @@
 
 <%= bootstrap_form_for [@blog, @comment] do |f| %>
   <%= f.text_area :text, hide_label: true, placeholder: "Add a comment" %>
-  <%= f.submit %>
+  <%= f.primary "Add" %>
 <% end %>
 
 <div class="blog-comments-wrapper">
-  <ul class="">
+  <ul>
     <% @comments.each do |comment| %>
       <li>
         <p class="comment-author">
