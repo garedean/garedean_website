@@ -5,7 +5,7 @@ $(function() {
   });
 
   $(".clip-circle").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-    window.location.replace("/home");
+    window.location.replace("/about");
   });
 
   $(".flash").delay(500).fadeOut(1500);
