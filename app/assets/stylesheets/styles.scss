@@ -127,8 +127,22 @@ p.comment-author {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url("woods_bg.jpg") no-repeat;
+  background-image: image-url("woods_bg.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: image-url("screen_overlay.png");
+  background-repeat: repeat;
+  background-color: rgba(0,0,0,0.1);
+  height: 100%;
 }
 
 .name-stamp {

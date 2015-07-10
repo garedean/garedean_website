@@ -1,12 +1,12 @@
 The Garedean Portfolio site
 
-
-Note to the instructor:
+NOTES TO THE INSTRUCTOR
 -----------------------
 
-Note: at the expense of lower marks for the assessment, I decided to use a different layout for my portfolio site. My version doesn't have multiple layers (skills with nested projects then nested details): that seemed very click-heavy to me, and I want a prospective employer to be able to see all of the main points on a single page. Since my version had more limited functionality, I spent much of the time on styling and UI.
+In order for the admin functionality to work, you'll need to manually set the 'admin' but in the users table to true. When logged in as a standard user, running this in irb should do the trick:
 
-My version has a 'Projects page' with CRUD functionality. My plan is to simply nest technologies used during development in the description of each project.
+    current_user.update_attribute :admin, true
+
 
 ABOUT
 -----------------------
