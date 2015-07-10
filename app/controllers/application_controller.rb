@@ -1,7 +1,9 @@
-class ApplicationController < ActionController::Base  
+class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  private
 
   def after_sign_in_path_for(resource)
     request.env['omniauth.origin'] || stored_location_for(resource) || about_path
@@ -9,5 +11,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_out_path_for(resource_or_scope)
     about_path
+  end
+
+  def verify_is_admin
+    redirect_to(about_path) unless current_user.admin?
   end
 end

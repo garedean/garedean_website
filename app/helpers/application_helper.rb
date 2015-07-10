@@ -1,5 +1,5 @@
 module ApplicationHelper
   def admin?
-    current_user.admin? if current_user    
+    current_user.try(:admin?)
   end
 end

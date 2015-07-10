@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  #layout "layouts/centered_column_layout"
+  before_action :verify_is_admin, only: [:edit, :new]
 
   def index
     @projects = Project.all
