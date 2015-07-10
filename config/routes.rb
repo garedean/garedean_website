@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   root "static_pages#landing_page"
   resources :projects
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
 
   # For later development, not in use
   get '/about', to: 'static_pages#about'

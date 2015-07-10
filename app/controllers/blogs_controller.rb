@@ -18,6 +18,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = find_blog
+    @comment = Comment.new
+    @comments = @blog.comments.all
   end
 
   def destroy

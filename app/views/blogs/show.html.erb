@@ -14,3 +14,16 @@
     <span>
   </footer>
 <% end %>
+
+<hr>
+
+<h4>Comments (<%= @comments.size %>)</h4>
+
+<div class="blog-comments-wrapper">
+  <%= bootstrap_form_for [@blog, @comment] do |f| %>
+    <%= f.text_area :text %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+asdf

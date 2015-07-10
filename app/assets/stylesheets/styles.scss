@@ -110,6 +110,10 @@ a:hover {
   color: #444;
 }
 
+.input-group-addon {
+  border-radius: 0px;
+}
+
 /* Landing Page */
 /* ---------------------------------------------*/
 
@@ -275,10 +279,6 @@ input[type="submit"] {
       color: #3c763d;
     }
   }
-}
-
-textarea.form-control {
-  height: 250px;
 }
 
 .flash-wrapper {
