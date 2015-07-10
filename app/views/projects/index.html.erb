@@ -27,5 +27,9 @@
 </ul>
 
 <footer>
-  <%= link_to "Add Project", new_project_path, class: "buttonize" %>
+  <% if user_signed_in? %>
+    <%= link_to new_project_path, class: "add pull-right" do %>
+      <span class="glyphicon glyphicon-plus"></span>
+    <% end %>
+  <% end %>
 </footer>

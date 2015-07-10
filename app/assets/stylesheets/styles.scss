@@ -192,11 +192,38 @@ a.buttonize {
 
 footer {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 0; left: 150px; right: 0;
   background: white;
-  a.new {
-    margin-right: 10px;
+  border-top: 1px solid #e3e3e3;
+  height: 50px;
+  span {
+    line-height: 50px;
+  }
+  .edit-delete-links {
+    margin-right: 15px;
+  }
+}
+
+a.add {
+  position: relative;
+  top: -30px;
+  right: 30px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 8px #ccc;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
   }
 }
 
@@ -229,7 +256,6 @@ input[type="submit"] {
 
 .edit-delete-wrapper {
   a {
-    font-weight: bold;
     opacity: initial;
     &:hover {
       background: none;
@@ -289,8 +315,22 @@ textarea.form-control {
 /* Media Queries */
 /* ---------------------------------------------*/
 
+/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .fixed-column {
     width: 600px;
   }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  footer {
+    left: initial;
+    border-top: 1px solid transparent;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }

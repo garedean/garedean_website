@@ -18,8 +18,10 @@
   <% end %>
 </ul>
 
-<% if user_signed_in? %>
-  <%= link_to new_blog_path do %>
-    <span class="glyphicon glyphicon-plus"></span>
+<footer>
+  <% if user_signed_in? %>
+    <%= link_to new_blog_path, class: "add pull-right" do %>
+      <span class="glyphicon glyphicon-plus"></span>
+    <% end %>
   <% end %>
-<% end %>
+</footer>
