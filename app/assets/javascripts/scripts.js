@@ -10,5 +10,7 @@ $(function() {
 
   $(".flash").delay(500).fadeOut(1500);
 
-  autosize($('textarea'));
+  $(document).on("page:change", function() {
+    autosize($('textarea'));
+	});
 });

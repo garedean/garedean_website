@@ -27,6 +27,7 @@ nav {
   height: 100%;
   margin-left: 150px;
   padding-top: 30px;
+  padding-bottom: 100px;
   overflow: auto;
 }
 
@@ -38,7 +39,7 @@ ul {
 
 .blogs-wrapper {
   li {
-    margin: 10px 0;
+    margin: 15px 0;
     a {
       display: inline-block;
       width: 100%;
@@ -112,6 +113,11 @@ a:hover {
 
 .input-group-addon {
   border-radius: 0px;
+}
+
+p.comment-author {
+  font-size: .8em;
+  margin-bottom: 0px;
 }
 
 /* Landing Page */
@@ -306,6 +312,14 @@ input[type="submit"] {
 
 .form-control {
   border-radius: 0px;
+}
+
+.blog-comments-wrapper {
+  margin-top: 20px;
+  li {
+    padding: 5px 0;
+    border-top: 1px solid #e3e3e3;
+  }
 }
 
 /* Media Queries */
