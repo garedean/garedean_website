@@ -1,9 +1,15 @@
-<header class="page-header">
-  <h1 class="page-heading text-center">Projects</h1>
+<% content_for :custom_styles do %>
+  <% if admin? %>
+    .project-list li:hover {
+      background: #fafafa;
+      cursor: default;
+    }
+  <% end %>
+<% end %>
 
-  <p class="x-small text-center">
-    <i>(Links open each project site in a new tab)</i>
-  </p>
+
+<header>
+  <h1 class="page-header text-center">Projects</h1>
 </header>
 
 <ul class="project-list">
@@ -15,21 +21,23 @@
         <%= project.description %>
       </p>
 
-      <p class="clearfix">
-        <span class="edit-delete-wrapper pull-right">
-          <%= link_to "Edit", edit_project_path(project) %>
-          |
-          <%= link_to "Delete", project_path(project), :data => {confirm: "Sure you want to delete this?", method: "delete"}, class: "text-danger" %>
-        <span>
-      </p>
+      <% if admin? %>
+        <p class="clearfix">
+          <span class="edit-delete-wrapper pull-right">
+            <%= link_to "Edit", edit_project_path(project) %>
+            |
+            <%= link_to "Delete", project_path(project), :data => {confirm: "Sure you want to delete this?", method: "delete"}, class: "text-danger" %>
+          <span>
+        </p>
+      <% end %>
     </li>
   <% end %>
 </ul>
 
-<footer>
-  <% if user_signed_in? %>
+<% if admin? %>
+  <footer>
     <%= link_to new_project_path, class: "add pull-right" do %>
       <span class="glyphicon glyphicon-plus"></span>
     <% end %>
-  <% end %>
-</footer>
+  </footer>
+<% end %>

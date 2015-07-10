@@ -6,9 +6,11 @@
 
 <%= @blog.content %>
 
-<footer>
-  <span class="pull-right edit-delete-links">
-    <%= link_to "Edit", edit_blog_path(@blog) %> |
-    <%= link_to "Delete", @blog, class:"text-danger", method: :delete %>
-  <span>
-</footer>
+<% if admin? %>
+  <footer>
+    <span class="pull-right edit-delete-links">
+      <%= link_to "Edit", edit_blog_path(@blog) %> |
+      <%= link_to "Delete", @blog, class:"text-danger", method: :delete %>
+    <span>
+  </footer>
+<% end %>
