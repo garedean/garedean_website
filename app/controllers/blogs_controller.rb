@@ -38,7 +38,7 @@ class BlogsController < ApplicationController
   def update
     @blog = find_blog
     @blog.update(blog_params)
-    redirect_to blogs_path
+    redirect_to blog_path(@blog.id)
   end
 
   private
