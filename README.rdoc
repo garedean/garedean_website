@@ -3,24 +3,22 @@ The Garedean Portfolio site
 NOTES TO THE INSTRUCTOR
 -----------------------
 
-In order for the admin functionality to work, you'll need to manually set the 'admin' but in the users table to true. When logged in as a standard user, running this in irb should do the trick:
+In order for the admin functionality to work, the 'admin' bit in the 'users' table must be set to true. For the sake of expedience:
 
-    current_user.update_attribute :admin, true
+UPDATE users SET admin=true WHERE id=1;
 
+Note that the above assumes you have signed up for at least one user account and want to update the user with id '1'.
 
-ABOUT
------------------------
+Also, I set up the db/seeds.rb file so it should populate a small amount of initial data.
 
-This is my person portfolio site! It's currently small, but functionality is being built out slowly but surely.
 
 SET UP
 -----------------------
 
 1. Once cloned onto a local machine, navigate to its path in your terminal
 2. Start a PostGreSQL server
-3. Terminal:'rake db:create'
-4. Terminal:'rake db:test:prepare'
-5. Terminal:'rake db:migrate'
+3. Terminal: 'rake db:create'
+4. Terminal: 'rake db:test:prepare'
+5. Terminal: 'rake db:migrate'
+6. Terminal: 'rake db:seed'
 6. To run the app, in the terminal, type "rails server" then hit "enter"
-
-Note: the home root goes to a landing page. In order to get to the page that this assessment was for, you can navigate to localhost:3000/projects
