@@ -30,6 +30,27 @@ nav {
   overflow: auto;
 }
 
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+  padding-start: 0px;
+}
+
+.blogs-wrapper {
+  li {
+    margin: 10px 0;
+    a {
+      display: inline-block;
+      width: 100%;
+      span {
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
 .article {
   text-align: justify;
 }
@@ -259,7 +280,10 @@ textarea.form-control {
   bottom: 5px;
   left: 22px;
   font-size: .8em;
+}
 
+.form-control {
+  border-radius: 0px;
 }
 
 /* Media Queries */
