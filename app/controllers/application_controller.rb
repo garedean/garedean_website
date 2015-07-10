@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_is_admin
-    redirect_to(about_path) unless current_user.admin?
+    redirect_to "http://cloud-4.steamusercontent.com/ugc/559891575259321863/2600A129AAB2C71BC3A156BEDE8A74C790DD2249/" unless current_user.admin?
   end
 end

@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :verify_is_admin, only: [:edit, :new]
-  
+  before_action :verify_is_admin, except: [:index]
+
   def index
     @blogs = Blog.all
   end
