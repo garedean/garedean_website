@@ -28,6 +28,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara', '~> 2.4.4'
   gem 'simplecov', require: false
+  gem 'factory_girl_rails'
 end
 
 ruby "2.2.0"
