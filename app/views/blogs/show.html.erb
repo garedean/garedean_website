@@ -10,28 +10,29 @@
 
 <h4>Comments (<%= @comments.size %>)</h4>
 
-<% if current_user %>
-  <%= bootstrap_form_for [@blog, @comment] do |f| %>
+<%= bootstrap_form_for [@blog, @comment] do |f| %>
 
-    <%= f.text_field :author, hide_label: true, placeholder: "First name" %>
+  <%= f.text_field :author, hide_label: true, placeholder: "First name" %>
 
-    <%= f.text_area :text, hide_label: true, placeholder: "Comment" %>
+  <%= f.text_area :text, hide_label: true, placeholder: "Comment" %>
 
-    <!-- Google's reCapthca pluging for preventing spam -->
-    <%= recaptcha_tags %>
+  <!-- Google's reCapthca pluging for preventing spam -->
+  <%= recaptcha_tags %>
 
-    <%= f.submit "Add", class: "add-after-recaptcha btn btn-primary" %>
+  <%= f.submit "Add", class: "add-after-recaptcha btn btn-primary" %>
 
-  <% end %>
 <% end %>
 
 <div class="blog-comments-wrapper">
   <ul>
     <% @comments.each do |comment| %>
       <li>
-        <p class="comment-author">
-          <%= comment.author %>:
-        </p>
+        <small>
+            <%= comment.author %>:
+            <span class="pull-right">
+              <%= comment.created_at.strftime("%b %y, %Y") %>
+            </span>
+        </small>
 
         <%= comment.text %>
 

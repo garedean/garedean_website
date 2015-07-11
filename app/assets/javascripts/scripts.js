@@ -8,7 +8,7 @@ $(function() {
     window.location.replace("/about");
   });
 
-  $(".flash").delay(500).fadeOut(1500);
+  $(".flash").delay(1000).fadeOut(1500);
 
   $(document).on("page:change", function() {
     autosize($('textarea'));

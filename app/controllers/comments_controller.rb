@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     if verify_recaptcha
       if @comment.save
         @blog.comments.push(@comment)
+        flash[:notice] = "Comment added!"
         redirect_to :back
       else
         render "blogs/show"
