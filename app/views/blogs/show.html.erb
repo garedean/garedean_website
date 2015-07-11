@@ -12,8 +12,16 @@
 
 <% if current_user %>
   <%= bootstrap_form_for [@blog, @comment] do |f| %>
-    <%= f.text_area :text, hide_label: true, placeholder: "Add a comment" %>
-    <%= f.primary "Add" %>
+
+    <%= f.text_field :author, hide_label: true, placeholder: "First name" %>
+
+    <%= f.text_area :text, hide_label: true, placeholder: "Comment" %>
+
+    <!-- Google's reCapthca pluging for preventing spam -->
+    <%= recaptcha_tags %>
+
+    <%= f.submit "Add", class: "add-after-recaptcha btn btn-primary" %>
+
   <% end %>
 <% end %>
 
@@ -22,8 +30,9 @@
     <% @comments.each do |comment| %>
       <li>
         <p class="comment-author">
-          <%= comment.user.email %>:
+          <%= comment.author %>:
         </p>
+
         <%= comment.text %>
 
         <% if admin? %>

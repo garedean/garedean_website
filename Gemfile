@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'pry', :require => 'pry'
 gem 'bootstrap_form'
 gem 'devise', '~> 3.5.1'
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :development do
   gem 'byebug'

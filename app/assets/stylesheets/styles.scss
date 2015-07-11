@@ -317,11 +317,27 @@ input[type="submit"] {
   line-height: 30px;
 }
 
-.sign-in-up {
+.edit-logout-links {
   position: absolute;
   bottom: 5px;
-  left: 22px;
+  left: 9px;
   font-size: .8em;
+}
+
+.login-link {
+  display: inline-block;
+  position: absolute;
+  top: 0; right: 0;
+  height: 20px;
+  width: 20px;
+  &:hover {
+    background: initial;
+    cursor: default;
+  }
+}
+
+.add-after-recaptcha {
+  margin-top: 13px;
 }
 
 .form-control {

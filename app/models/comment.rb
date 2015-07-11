@@ -1,5 +1,16 @@
 class Comment < ActiveRecord::Base
+  before_save :capitalize_text, :capitalize_author
+
   belongs_to :blog
-  belongs_to :user
-  validates :text, :presence => true
+  validates :text, :author, :presence => true
+
+  private
+
+  def capitalize_text
+    text.capitalize!
+  end
+
+  def capitalize_author
+    author.capitalize!
+  end
 end

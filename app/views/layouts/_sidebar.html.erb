@@ -16,7 +16,7 @@
     </li>
   </ul>
 
-  <span class="sign-in-up">
+  <!-- <span class="sign-in-up">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path %> |
@@ -25,11 +25,18 @@
       <%= link_to "Sign up", new_user_registration_path %> |
       <%= link_to "Login", new_user_session_path %>
     <% end %>
+  </span> -->
+
+
+  <%= link_to new_user_session_path, class: "login-link" do %>
+  <% end %>
+
+  <span class="edit-logout-links">
+    <% if user_signed_in? %>
+      Logged in as ADMIN
+      <br>
+      <%= link_to 'Edit profile', edit_user_registration_path %> |
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <% end %>
   </span>
 </nav>
-
-
-
-<!-- <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, id: "flash_#{name}" %>
-<% end %> -->

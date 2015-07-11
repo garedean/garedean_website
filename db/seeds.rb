@@ -60,4 +60,5 @@ blog_posts.each do |post|
                  content: post[:content])
 end
 
-User.create(email: "admin@test.com", password: "123abc!!", admin: true)
+# Initial admin user
+User.create(email: "garrettdolson@gmail.com", password: "123abc!!", admin: true)
