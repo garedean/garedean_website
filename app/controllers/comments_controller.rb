@@ -1,10 +1,11 @@
 class CommentsController < ApplicationController
   def create
-    if verify_recaptcha
-      @comment = Comment.new(comment_params)
-      @blog = Blog.find(params[:blog_id])
-      @comments = @blog.comments.all
 
+    @comment = Comment.new(comment_params)
+    @blog = Blog.find(params[:blog_id])
+    @comments = @blog.comments.all
+
+    if verify_recaptcha
       if @comment.save
         @blog.comments.push(@comment)
         redirect_to :back
@@ -12,7 +13,7 @@ class CommentsController < ApplicationController
         render "blogs/show"
       end
     else
-      redirect_to :back
+      render "blogs/show"
     end
   end
 

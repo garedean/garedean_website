@@ -7,10 +7,10 @@ class Comment < ActiveRecord::Base
   private
 
   def capitalize_text
-    text.capitalize!
+    self.text = text[0].upcase + text[1..-1]
   end
 
   def capitalize_author
-    author.capitalize!
+    self.author = author[0].upcase + author[1..-1]
   end
 end
