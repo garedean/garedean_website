@@ -21,6 +21,7 @@ class BlogsController < ApplicationController
 
   def show
     @blog = find_blog
+    @content = @blog.content.html_safe
     @comment = Comment.new
     @comments = @blog.comments.all
   end

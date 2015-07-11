@@ -4,9 +4,9 @@
   </h1>
 </header>
 
-<%= @blog.content %>
-
-<hr>
+<div class="post-wrapper">
+  <%= simple_format(@content) %>
+</div>
 
 <h4>Comments (<%= @comments.size %>)</h4>
 
