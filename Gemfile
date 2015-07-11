@@ -31,4 +31,4 @@ group :test do
   gem 'factory_girl_rails'
 end
 
-ruby "2.2.0"
+ruby "2.2.2"
