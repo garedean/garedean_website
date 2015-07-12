@@ -22,46 +22,6 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-<!-- <h4>Comments (<%= @comments.size %>)</h4>
-
-<%= bootstrap_form_for [@blog, @comment] do |f| %>
-
-  <%= f.text_field :author, hide_label: true, placeholder: "First name" %>
-
-  <%= f.text_area :text, hide_label: true, placeholder: "Comment" %>
-
-  <%= recaptcha_tags %>
-
-  <%= f.submit "Add", class: "add-after-recaptcha btn btn-primary" %>
-
-<% end %>
-
-<div class="blog-comments-wrapper">
-  <ul>
-    <% @comments.each do |comment| %>
-      <li>
-        <small>
-            <%= comment.author %>:
-            <span class="pull-right">
-              <%= comment.created_at.strftime("%b %y, %Y") %>
-            </span>
-        </small>
-
-        <%= comment.text %>
-
-        <% if admin? %>
-          <p class="clearfix">
-            <small class="edit-delete-wrapper pull-right">
-              <%= link_to "Delete comment", blog_comment_path(@blog, comment), :data => {confirm: "Sure you want to delete this?", method: "delete"}, class: "text-danger" %>
-            </small>
-          </p>
-        <% end %>
-
-      </li>
-    <% end %>
-  </ul>
-</div> -->
-
 <% if admin? %>
   <footer>
     <span class="pull-right edit-delete-links">
