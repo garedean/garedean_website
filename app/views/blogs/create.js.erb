@@ -1,1 +1,10 @@
-$('#comments-list').append("<%= j render('blogs/comment', comment: @comment) %>")
+// Increment the comment counter by one
+var comment_counter= $("#comment-count");
+var comment_count_value = parseInt(comment_counter.text());
+comment_counter.text(comment_count_value + 1);
+
+// Reset the comment fields
+$("#new_comment").find("input[type='text'], textarea").val("");
+
+// Prepend the comment
+$('#comments-list').prepend("<%= j render('blogs/comment', comment: @comment) %>")
