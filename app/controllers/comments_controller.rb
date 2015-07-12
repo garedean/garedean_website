@@ -1,21 +1,25 @@
 class CommentsController < ApplicationController
   def create
 
-    @comment = Comment.new(comment_params)
     @blog = Blog.find(params[:blog_id])
+    @comment = Comment.new(comment_params)
     @comments = @blog.comments.all
 
-    if verify_recaptcha
+    #if verify_recaptcha
       if @comment.save
         @blog.comments.push(@comment)
         flash[:notice] = "Comment added!"
-        redirect_to :back
+
+        respond_to do |format|
+          #format.html { redirect_to :back }
+          format.js { render "blogs/create" }
+        end
       else
         render "blogs/show"
       end
-    else
-      render "blogs/show"
-    end
+    # else
+    #   render "blogs/show"
+    # end
   end
 
   def destroy

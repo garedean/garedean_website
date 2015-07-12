@@ -1,0 +1,18 @@
+<li>
+  <small>
+      <%= comment.author %>:
+      <span class="pull-right">
+        <%= comment.created_at.strftime("%b %y, %Y") %>
+      </span>
+  </small>
+
+  <%= comment.text %>
+
+  <% if admin? %>
+    <p class="clearfix">
+      <small class="edit-delete-wrapper pull-right">
+        <%= link_to "Delete comment", blog_comment_path(@blog, comment), :data => {confirm: "Sure you want to delete this?", method: "delete"}, class: "text-danger" %>
+      </small>
+    </p>
+  <% end %>
+</li>
