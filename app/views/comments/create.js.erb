@@ -10,4 +10,4 @@ var comment_count_value = parseInt(comment_counter.text());
 comment_counter.text(comment_count_value + 1);
 
 // Prepend the comment
-$('#comments-list').prepend("<%= j render('blogs/comment', comment: @comment) %>");
+$('#comments-list').prepend("<%= j render('comment', comment: @comment) %>");

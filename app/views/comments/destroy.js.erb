@@ -1,0 +1,7 @@
+// Increment the comment counter by one
+var comment_counter= $("#comment-count");
+var comment_count_value = parseInt(comment_counter.text());
+comment_counter.text(comment_count_value - 1);
+
+// Remove the comment
+$("#comment_<%= @comment.id %>").remove();
