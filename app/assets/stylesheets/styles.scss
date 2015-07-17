@@ -358,6 +358,14 @@ input[type="submit"] {
   margin-bottom: 30px;
 }
 
+span.linkify {
+  color: #337ab7;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 /* Media Queries */
 /* ---------------------------------------------*/
 

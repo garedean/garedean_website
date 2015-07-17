@@ -10,14 +10,12 @@
 
 <h4>Comments (<span id="comment-count"><%= @comments.size %></span>)</h4>
 
+<span id="add-new-comment" class="linkify">Add Comment</span>
+
 <%= bootstrap_form_for [@blog, @comment], remote: true do |f| %>
-
   <%= f.text_field :author, hide_label: true, placeholder: "First name" %>
-
   <%= f.text_area :text, hide_label: true, placeholder: "Comment" %>
-
   <%= f.submit "Add", class: "add-after-recaptcha btn btn-primary" %>
-
 <% end %>
 
 <div class="blog-comments-wrapper">
