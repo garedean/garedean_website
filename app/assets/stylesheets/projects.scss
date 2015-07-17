@@ -1,0 +1,26 @@
+.references-wrapper {
+  .references{
+    width: 570px;
+    display: none;
+    margin-bottom: 0;
+
+    /* Remove margin-bottom from last element, fixes
+    bug with jQuery slideToggle where margins collapse after animation
+    causing content to jump up on the page */
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .hide-references {
+    display: none;
+  }
+  &.expanded {
+    .show-references {
+      display: none;
+    }
+    .hide-references {
+      display: inline;
+    }
+  }
+
+}
