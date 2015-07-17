@@ -14,4 +14,15 @@ FactoryGirl.define do
     author("Bill Brasky")
     text("Great post!")
   end
+
+  factory(:user) do
+    email("user@test.com")
+    password("123abc!!")
+  end
+
+  factory(:admin, class: User) do
+		email("admin@test.com")
+		password("123abc!!")
+		admin(true)
+	end
 end

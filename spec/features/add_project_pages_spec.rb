@@ -1,39 +1,28 @@
 require 'rails_helper'
 
-# describe "when adding a project" do
-#   it "filling in all required fields with correct data results in a newly added project with correct details" do
-#     visit projects_path
-#     click_on "Add Project"
-#     fill_in "project[name]", with: "KindMind.com"
-#     fill_in "project[description]", with: "A very cool website I am building."
-#     fill_in "project[url]", with: "https://www.kindmind.com"
-#     click_on 'Add'
-#     expect(page).to have_content "Project added!"
-#     expect(page).to have_content "KindMind.com"
-#     expect(page).to have_content "a very cool website I am building."
-#   end
-#
-#   it "the name field is validated for presence" do
-#     visit new_project_path
-#     fill_in "project[description]", with: "A very cool website I am building."
-#     fill_in "project[url]", with: "https://www.kindmind.com"
-#     click_on 'Add'
-#     expect(page).to have_content "can't be blank"
-#   end
-#
-#   it "the description field is validated for presence" do
-#     visit new_project_path
-#     fill_in "project[name]", with: "KindMind.com"
-#     fill_in "project[url]", with: "https://www.kindmind.com"
-#     click_on 'Add'
-#     expect(page).to have_content "can't be blank"
-#   end
-#
-#   it "the url field is validated for presence" do
-#     visit new_project_path
-#     fill_in "project[name]", with: "KindMind.com"
-#     fill_in "project[description]", with: "A very cool website I am building."
-#     click_on 'Add'
-#     expect(page).to have_content "can't be blank"
-#   end
-# end
+describe "the add project functionality" do
+  before(:each) do
+    @admin = FactoryGirl.create(:admin)
+  end
+
+  it "adds a project" do
+    login_as(@admin, scope: :user)
+    visit projects_path
+    find("a.add").click
+    fill_in "project[name]", with: "Project Gemini"
+    fill_in "project[description]", with: "A top secret project"
+    fill_in "project[url]", with: "www.projectgemini.com"
+    click_on 'Add'
+    expect(page).to have_content "Project added!"
+    expect(page).to have_content "Project Gemini"
+    expect(page).to have_content "a top secret project"
+  end
+
+  it "shows errors if the form is blank" do
+    login_as(@admin, scope: :user)
+    visit projects_path
+    find("a.add").click
+    click_on 'Add'
+    expect(page).to have_content "can't be blank"
+  end
+end

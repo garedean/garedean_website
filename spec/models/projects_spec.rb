@@ -10,7 +10,7 @@ describe Project do
     project.name.should eq "KindMind.com"
   end
 
-  it "saves a new project's description AND lowercases the first character" do
+  it "saves a new project's description and lowercases the first character" do
     project = FactoryGirl.create(:project)
     project.description.should eq "a cool website I'm working on."
   end

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
-gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pry', :require => 'pry'
 gem 'bootstrap_form'
-gem 'devise', '~> 3.5.1'
+gem 'devise'
 gem "recaptcha", :require => "recaptcha/rails"
 
 group :development do
@@ -23,13 +23,15 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'capybara', '~> 2.4.4'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara', '~> 2.4.4'
-  gem 'simplecov', require: false
   gem 'factory_girl_rails'
+  gem 'warden'
+  gem 'simplecov', require: false
+  gem 'poltergeist'
 end
 
 ruby "2.2.2"

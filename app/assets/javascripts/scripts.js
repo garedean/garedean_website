@@ -13,4 +13,8 @@ $(function() {
   $(document).on("page:change", function() {
     autosize($('textarea'));
 	});
+
+  $(".test").click(function() {
+    $('.test-result').text("Bingo");
+  });
 });
