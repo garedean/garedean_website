@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def create
-
     @blog = Blog.find(params[:blog_id])
     @comment = Comment.new(comment_params)
     @comments = @blog.comments.all
@@ -10,11 +9,14 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment added!"
 
       respond_to do |format|
-        format.html { redirect_to :back }
-        format.js { render "blogs/create" }
+        format.html { render "blogs/show" }
+        format.js
       end
     else
-      render "blogs/show"
+      respond_to do |format|
+        format.html { render "blogs/show" }
+        format.js { render "new" }
+      end
     end
   end
 
