@@ -1,7 +1,0 @@
-Add a "See references" button in your main portfolio area: when the user clicks on it, show a list of professional references without refreshing the page.
-
-Add a close feature that hides the references and shows the "See references" button again.
-
-DONE - When a user wants to add a comment to a blog post, use AJAX to show a comments form.
-
-DONE -- Append the new comment to the list of comments and close the form after submission.
