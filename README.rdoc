@@ -1,6 +1,6 @@
 The Garedean Portfolio site
 
-See it live: https://garrettportfolio.herokuapp.com/blogs
+See it live: https://stormy-hamlet-2525.herokuapp.com
 
 NOTES TO THE INSTRUCTOR
 -----------------------
