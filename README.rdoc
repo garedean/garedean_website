@@ -1,24 +1,23 @@
 The Garedean Portfolio site
 
-See it live: http://murmuring-wildwood-2954.herokuapp.com/
+See it live: https://thawing-inlet-3560.herokuapp.com/projects
 
 NOTES TO THE INSTRUCTOR
 -----------------------
 
 I created a test admin account on the live heroku app. To login as admin:
 
-username: admin@test.com
-password: 123abc!!
+1. Navigate to https://thawing-inlet-3560.herokuapp.com/users/sign_in
+2. username: admin@test.com
+3. password: 123abc!!
 
-If testing admin functionality in development, the 'admin' bit in the 'users' table must be set to true:
+My goal is to have user authentication only be required for Admins, so I am hiding the 'Login' link so visitors don't see it. To login, visit the '/users/sign_in' path.
+
+If testing admin functionality in development, the 'admin' bit in the 'users' table must be set to true
 
 UPDATE users SET admin=true WHERE id=1;
 
 The above assumes you have signed up for at least one user account and want to update the user with id '1'.
-
-Also, I set up the db/seeds.rb file so it should populate a small amount of initial data.]
-
-Lastly, my goal is to have user authentication only be required for Admins, so I hide the 'Login' link. To login, visit the '/users/sign_in' path.
 
 SET UP
 -----------------------
