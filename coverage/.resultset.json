@@ -1,35 +1,8 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/garedean/Desktop/garedean_website_rails/spec/features/add_project_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
+      "/Users/garedean/Desktop/garedean_website_rails/spec/features/add_comment_pages_spec.rb": [
+        1
       ],
       "/Users/garedean/Desktop/garedean_website_rails/spec/rails_helper.rb": [
         1,
@@ -579,48 +552,33 @@
         1,
         null
       ],
-      "/Users/garedean/Desktop/garedean_website_rails/spec/features/comment_pages_spec.rb": [
+      "/Users/garedean/Desktop/garedean_website_rails/spec/features/add_project_pages_spec.rb": [
         1,
         null,
         1,
+        1,
+        2,
+        null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -629,8 +587,23 @@
         null,
         1,
         1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
+      ],
+      "/Users/garedean/Desktop/garedean_website_rails/spec/features/edit_comment_pages_spec.rb": [
+
+      ],
+      "/Users/garedean/Desktop/garedean_website_rails/spec/features/edit_post_pages_spec.rb": [
+
+      ],
+      "/Users/garedean/Desktop/garedean_website_rails/spec/features/edit_project_pages_spec.rb": [
+
       ],
       "/Users/garedean/Desktop/garedean_website_rails/spec/helpers/application_helper_spec.rb": [
         1,
@@ -782,6 +755,7 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         1,
@@ -828,6 +802,6 @@
         null
       ]
     },
-    "timestamp": 1437176611
+    "timestamp": 1437184831
   }
 }

@@ -301,20 +301,28 @@ input[type="submit"] {
   }
 }
 
-.flash-wrapper {
+.flash {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
-}
-
-.flash {
-  background: #C1FFC1;
-  text-align: center;
   height: 30px;
   margin: 0;
   line-height: 30px;
+  text-align: center;
+  font-size: 1.3em;
+  color: white;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  z-index: 9999;
+  &.notice {
+    background: #08c;
+  }
+  &.alert {
+    background: #ff4c4c;
+  }
 }
 
 .edit-logout-links {

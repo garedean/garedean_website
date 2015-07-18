@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
   <style>
-    <%= yield :custom_styles %>
+    <%= yield(:custom_styles) %>
   </style>
 
   <!-- Use Google reCaptcha to prevent spam -->
@@ -16,13 +16,9 @@
 
 <body>
 
-  <div class="flash-wrapper">
-    <% if flash[:notice] %>
-    <p class="flash">
-      <%= flash[:notice] %>
-    </p>
-    <% end %>
-  </div>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash #{key}" %>
+  <% end %>
 
   <%= render 'layouts/sidebar' %>
 
