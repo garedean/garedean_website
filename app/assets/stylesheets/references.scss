@@ -1,0 +1,16 @@
+.references-list {
+  margin-top: 30px;
+  font-style: italic;
+  font-size: .92em;
+  li {
+    padding: 14px 0;
+    width: 80%;
+  }
+  li:nth-child(odd) {
+    text-align: left;
+  }
+  li:nth-child(even) {
+    margin-left: 20%;
+    text-align: right;
+  }
+}

@@ -1,0 +1,10 @@
+<ul>
+  <% for reference in @references %>
+    <li>
+      <%= form_for @reference do |f| %>
+        <%= f.text_field :quote %>
+        <%= f.submit %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

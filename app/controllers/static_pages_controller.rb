@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     render :layout => 'layouts/landing_layout'
   end
 
-  def references
+  def contact
+
   end
 end

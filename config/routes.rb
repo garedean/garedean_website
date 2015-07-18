@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   resources :blogs do
     resources :comments
   end
+  resources :references
 
   # For later development, not in use
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
-  get '/references', to: 'static_pages#references'
+  get '/contact',    to: 'static_pages#contact'
 
 end
