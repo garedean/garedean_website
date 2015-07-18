@@ -8,9 +8,12 @@
   <%= simple_format(@content) %>
 </div>
 
-<h4>Comments (<span id="comment-count"><%= @comments.size %></span>)</h4>
-
-<span id="add-new-comment" class="linkify">Add Comment</span>
+<h4>
+  <span id="comment-count">
+    <%= @comments.size %>
+  </span> Comments
+  <span id="add-new-comment" class="linkify pull-right">Add Comment</span>
+</h4>
 
 <div class="comment-form-wrapper">
   <%= render "comments/form", comment: Comment.new %>
