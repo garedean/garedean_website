@@ -1,11 +1,13 @@
 <header class="page-header">
-  <h1 class="page-heading text-center">References</h1>
+  <h1 class="page-heading text-center">Contact</h1>
 </header>
 
-<%= image_tag "gh_logo" %>
-<a href="https://github.com/garedean?tab=repositories" class="github-link" target="_blank">https://github.com/garedean</a>
+<div id="github-contact-wrapper">
+  <%= image_tag "gh_logo" %>
+  <a href="https://github.com/garedean?tab=repositories" class="github-link" target="_blank">https://github.com/garedean</a>
+</div>
 
-<div id="contact-wrapper">
+<div id="message-contact-wrapper">
   Let's talk!<br>
   <%= bootstrap_form_for "#" do |f| %>
     <%= f.text_field :name, hide_label: true, placeholder: "Name" %>
