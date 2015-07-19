@@ -1,3 +1,5 @@
+<%= link_to "Edit all", edit_multiple_references_path %>
+
 <header class="page-header">
   <h1 class="page-heading text-center">
     References
@@ -8,17 +10,10 @@
 
 <hr>
 
-<% if admin? %>
-  <%= bootstrap_form_for @reference do |f| %>
-    <%= f.text_area :quote, autofocus: true %>
-    <%= f.submit %>
-  <% end %>
-<% end %>
-
 <ul class="references-list">
   <% for reference in @references %>
     <li id="reference_<%= reference.id %>">
-      <%= reference.quote %> <%= link_to "(delete)", reference_path(reference), class: "text-danger", method: :delete %>
+      <%= reference.quote %>
     </li>
   <% end %>
 </ul>

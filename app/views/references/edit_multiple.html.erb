@@ -1,0 +1,31 @@
+<header class="page-header">
+  <h1 class="page-heading text-center">
+    Edit References
+  </h1>
+</header>
+
+<p class="text-center">
+  <i class="text-xs">
+    Note: to delete a reference, erase all content from text area and update.
+  </i>
+</p>
+
+<%= form_tag update_multiple_references_path, id: "update_multiple", method: :put do %>
+  <% @references.each do |reference| %>
+    <%= fields_for "references[]", reference do |f| %>
+      <div class="form-group">
+        <%= f.text_area :quote, class:"form-control" %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag "Update", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% if admin? %>
+  <%= bootstrap_form_for @reference do |f| %>
+    <%= f.text_area :quote, label: "Add a reference:", autofocus: true %>
+    <%= f.primary %>
+  <% end %>
+<% end %>

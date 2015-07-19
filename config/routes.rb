@@ -10,10 +10,16 @@ Rails.application.routes.draw do
   resources :blogs do
     resources :comments
   end
-  resources :references, only: [:index, :create, :destroy]
 
-  get 'references/all/edit', to: 'references#edit_all', :as => :edit_all
-  put 'references/all' => 'references#update_all', :as => :update_all
+  resources :references, only: [:index, :create, :destroy] do
+    collection do
+      get :edit_multiple
+      put :update_multiple
+    end
+  end
+
+  #get 'references/all/edit', to: 'references#edit_all', :as => :edit_all
+  #put 'references/all' => 'references#update_all', :as => :update_all
 
   # For later development, not in use
   get '/about',      to: 'static_pages#about'

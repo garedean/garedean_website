@@ -1,6 +1,5 @@
 class ReferencesController < ApplicationController
   def index
-    @reference = Reference.new
     @references = Reference.all
   end
 
@@ -16,24 +15,34 @@ class ReferencesController < ApplicationController
     redirect_to :back
   end
 
-  def edit_all
+  def edit_multiple
     @references = Reference.all
+    @reference = Reference.new
   end
 
-  def update_all
-    binding.pry
-    reference_params.each do |id|
-      @reference = Reference.find(id.to_i)
-      @reference.update_attributes(reference_params[id])
-    end
+  def update_multiple
+    Reference.update(params[:references].keys, params[:references].values)
 
-    redirect_to(references_path)
+    # If user erases all content for a references, delete
+    # that reference record from the db
+    destroy_empties
+
+    redirect_to edit_multiple_references_path
   end
 
   private
 
   def reference_params
-    params.require(:reference).permit(:quote, {:reference => []})
+    params.require(:reference).permit(:quote)
   end
 
+  def references_params
+    params.require(:references).permit!
+  end
+
+  def destroy_empties
+    references_params.each do |id, reference|
+      Reference.destroy(id.to_i) if reference[:quote].empty?
+    end
+  end
 end

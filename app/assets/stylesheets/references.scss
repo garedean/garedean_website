@@ -1,16 +1,33 @@
 .references-list {
   margin-top: 30px;
   font-style: italic;
-  font-size: .92em;
+  font-size: .80em;
+  text-align: justify;
   li {
-    padding: 14px 0;
-    width: 80%;
+    padding: 10px;
+    width: 70%;
+    background: #FAFAFF;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 20px 0;
   }
   li:nth-child(odd) {
     text-align: left;
   }
   li:nth-child(even) {
-    margin-left: 20%;
+    margin-left: 30%;
     text-align: right;
   }
+}
+
+#new_reference {
+  margin-top: 30px;
+}
+
+#update_multiple {
+  margin-top: 25px;
+}
+
+.text-xs {
+  font-size: .75em;
 }
