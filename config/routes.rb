@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     collection do
       get :edit_multiple
       put :update_multiple
+      post :sort
     end
   end
 

@@ -1,6 +1,6 @@
 class ReferencesController < ApplicationController
   def index
-    @references = Reference.all
+    @references = Reference.order("position")
   end
 
   def create
@@ -32,6 +32,12 @@ class ReferencesController < ApplicationController
       flash[:notice] = "References have been updated!"
     end
     redirect_to edit_multiple_references_path
+  end
+
+  def sort
+    params[:reference].each_with_index do |id, index|
+      Reference.update_all({position: index + 1}, {id: id})
+    end
   end
 
   private

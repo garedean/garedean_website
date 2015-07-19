@@ -10,10 +10,10 @@
   </i>
 </p>
 
-<%= form_tag update_multiple_references_path, id: "update_multiple", method: :put do %>
+<%= form_tag update_multiple_references_path, id: "update_multiple", data: {update_url: sort_references_path}, method: :put do %>
   <% @references.each do |reference| %>
     <%= fields_for "references[]", reference do |f| %>
-      <div class="form-group">
+      <div class="form-group" id="reference_<%= reference.id %>">
         <%= f.text_area :quote, class:"form-control" %>
       </div>
     <% end %>
