@@ -34,4 +34,4 @@ group :test do
   gem 'poltergeist'
 end
 
-ruby "2.2.2"
+#ruby "2.2.2"
