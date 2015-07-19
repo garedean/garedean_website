@@ -1,4 +1,4 @@
-<%= link_to "Edit all", edit_multiple_references_path %>
+
 
 <header class="page-header">
   <h1 class="page-heading text-center">
@@ -17,3 +17,11 @@
     </li>
   <% end %>
 </ul>
+
+<% if admin? %>
+  <footer>
+    <span class="pull-right footer-links">
+      <%= admin_link_to "Edit all", edit_multiple_references_path %>
+    </span>
+  </footer>
+<% end %>
