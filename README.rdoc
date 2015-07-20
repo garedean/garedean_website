@@ -8,8 +8,8 @@ NOTES TO THE INSTRUCTOR
 I created a test admin account on the live heroku app. To login as admin:
 
 1. Navigate to https://thawing-inlet-3560.herokuapp.com/users/sign_in
-2. username: admin@test.com
-3. password: 123abc!!
+2. username:
+3. password: 
 
 My goal is to have user authentication only be required for Admins, so I am hiding the 'Login' link so visitors don't see it. To login, visit the '/users/sign_in' path.
 

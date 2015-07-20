@@ -33,5 +33,3 @@ end
 
 # Initial admin user
 User.create(email: "garrettdolson@gmail.com", password: "123abc!!", admin: true)
-
-User.create(email: "admin@test.com", password: "123abc!!", admin: true)
