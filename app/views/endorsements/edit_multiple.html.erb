@@ -1,0 +1,40 @@
+<header class="page-header">
+  <h1 class="page-heading text-center">
+    Edit References
+  </h1>
+</header>
+
+<p class="text-center">
+  <i class="text-xs">
+    Note: to delete a reference, erase all content from text area and update.
+  </i>
+</p>
+
+<%= form_tag update_multiple_endorsements_path, id: "update_multiple", data: {update_url: sort_endorsements_path}, method: :put do %>
+  <% @endorsements.each do |endorsement| %>
+    <%= fields_for "endorsements[]", endorsement do |f| %>
+      <div class="form-group" id="endorsement_<%= endorsement.id %>">
+        <%= f.text_area :quote, class:"form-control" %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag "Update", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% if admin? %>
+  <%= bootstrap_form_for @endorsement do |f| %>
+    <%= f.text_area :quote, label: "Add a reference:", autofocus: true %>
+    <%= f.primary %>
+  <% end %>
+<% end %>
+
+<!-- Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists  -->
+<script>
+  $("#update_multiple").sortable({axis: 'y'}, {
+    update: function(){
+      $.post($(this).data('update-url'), $(this).sortable('serialize'));
+    }
+  });
+</script>

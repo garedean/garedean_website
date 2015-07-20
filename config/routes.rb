@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :references, only: [:index, :create, :destroy] do
+  resources :endorsements, only: [:index, :create, :destroy] do
     collection do
       get :edit_multiple
       put :update_multiple

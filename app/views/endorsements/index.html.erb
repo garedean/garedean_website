@@ -8,10 +8,10 @@
 
 <hr>
 
-<ul class="references-list">
-  <% for reference in @references %>
-    <li id="reference_<%= reference.id %>">
-      <%= reference.quote %>
+<ul class="endorsements-list">
+  <% for endorsement in @endorsements %>
+    <li id="endorsement_<%= endorsement.id %>">
+      <%= endorsement.quote %>
     </li>
   <% end %>
 </ul>
@@ -19,7 +19,7 @@
 <% if admin? %>
   <footer>
     <span class="pull-right footer-links">
-      <%= admin_link_to "Edit all", edit_multiple_references_path %>
+      <%= admin_link_to "Edit all", edit_multiple_endorsements_path %>
     </span>
   </footer>
 <% end %>
