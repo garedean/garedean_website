@@ -21,7 +21,12 @@ class EndorsementsController < ApplicationController
   end
 
   def update_multiple
-    Endorsement.update(params[:endorsements].keys, params[:endorsements].values)
+
+    params[:endorsements].each_with_index do |id, index|
+      Endorsement.where(id: id).update_all(position: index + 1)
+    end
+
+    # Endorsement.update(params[:endorsements].keys, params[:endorsements].values)
 
     records_destroyed_count = destroy_empties
 
@@ -31,37 +36,28 @@ class EndorsementsController < ApplicationController
     else
       flash[:notice] = "Endorsements updated!"
     end
-    redirect_to edit_multiple_endorsements_path
-  end
-
-  def sort
-    params[:endorsement].each_with_index do |id, index|
-      Endorsement.where(id: id).update_all(position: index + 1)
-    end
-    flash[:notice] = "References reordered!"
-    render nothing: true
+    redirect_to :back
   end
 
   private
 
-  def endorsement_params
-    params.require(:endorsement).permit(:quote)
-  end
-
-  def endorsements_params
-    params.require(:endorsements).permit!
-  end
-
-  def destroy_empties
-    records_destroyed = 0
-
-    endorsements_params.each do |id, endorsement|
-      if endorsement[:quote].empty?
-        Endorsement.destroy(id.to_i)
-        records_destroyed += 1
-      end
+    def endorsement_params
+      params.require(:endorsement).permit(:quote)
     end
 
-    records_destroyed
-  end
+    def endorsements_params
+      params.require(:endorsements).permit!
+    end
+
+    def destroy_empties
+      records_destroyed = 0
+
+      endorsements_params.each do |id, endorsement|
+        if endorsement[:quote].empty?
+          Endorsement.destroy(id.to_i)
+          records_destroyed += 1
+        end
+      end
+      records_destroyed
+    end
 end
