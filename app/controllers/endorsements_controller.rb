@@ -5,6 +5,7 @@ class EndorsementsController < ApplicationController
 
   def create
     @endorsement = Endorsement.new(endorsement_params)
+    @endorsement.position = Endorsement.maximum("position") + 1
     @endorsement.save
     redirect_to :back
   end

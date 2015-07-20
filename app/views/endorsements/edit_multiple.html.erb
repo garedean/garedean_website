@@ -32,9 +32,5 @@
 
 <!-- Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists  -->
 <script>
-  $("#update_multiple").sortable({axis: 'y'}, {
-    update: function(){
-      $.post($(this).data('update-url'), $(this).sortable('serialize'));
-    }
-  });
+  $("#update_multiple").sortable({axis: 'y'});
 </script>
