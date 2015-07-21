@@ -1,5 +1,0 @@
-// Render the new comment form
-$(".comment-form-wrapper").html("<%= escape_javascript(render 'form', comment: @comment) %>");
-
-// Since the new comment form has display: none set initially, show it after a comment submission
-$("#new_comment").show();

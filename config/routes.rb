@@ -7,9 +7,7 @@ Rails.application.routes.draw do
 
   root "static_pages#landing_page"
   resources :projects
-  resources :blogs do
-    resources :comments
-  end
+  resources :blogs
 
   resources :endorsements, only: [:index, :create, :destroy] do
     collection do
