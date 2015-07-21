@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add project functionality" do
-  before(:each) do
+  before do
     @admin = FactoryGirl.create(:admin)
   end
 

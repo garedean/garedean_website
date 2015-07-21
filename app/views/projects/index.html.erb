@@ -14,7 +14,7 @@
 <ul class="project-list">
 
   <% @projects.each do |project| %>
-    <li>
+    <li id="project_<%= project.id %>">
       <p>
         <%= link_to "#{project.name}:", "https://#{project.url}", target: "_blank" %>
         <%= project.description %>
