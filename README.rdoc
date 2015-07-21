@@ -1,23 +1,17 @@
 The Garedean Portfolio site
 
-See it live: https://thawing-inlet-3560.herokuapp.com/projects
+Live link: http://thawing-inlet-3560.herokuapp.com/
 
 NOTES TO THE INSTRUCTOR
 -----------------------
 
-I created a test admin account on the live heroku app. To login as admin:
+This is late, my bad. To login as admin on the Heroku site:
 
-1. Navigate to https://thawing-inlet-3560.herokuapp.com/users/sign_in
-2. username:
-3. password: 
-
-My goal is to have user authentication only be required for Admins, so I am hiding the 'Login' link so visitors don't see it. To login, visit the '/users/sign_in' path.
+1. http://thawing-inlet-3560.herokuapp.com/users/sign_in
+2. username: admin@test.com
+3. password: 123abc!!
 
 If testing admin functionality in development, the 'admin' bit in the 'users' table must be set to true
-
-UPDATE users SET admin=true WHERE id=1;
-
-The above assumes you have signed up for at least one user account and want to update the user with id '1'.
 
 SET UP
 -----------------------
