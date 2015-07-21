@@ -3,14 +3,16 @@
   <div id="sortable_elements_wrapper">
     <% @endorsements.each do |endorsement| %>
       <%= fields_for "endorsements[]", endorsement do |f| %>
-        <div class="form-group" id="endorsement_<%= endorsement.id %>">
+        <!-- <div class="form-group" id="endorsement_<%= endorsement.id %>"> -->
+        <div class="form-group">
           <%= f.text_area :quote, class:"form-control" %>
         </div>
       <% end %>
     <% end %>
   </div>
 
-  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %>
+  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %><br>
+  <%= link_to "Add reference with update", id="add-update-endorsement", remote: true %>
 
   <% if @endorsements.any? %>
     <div class="actions">

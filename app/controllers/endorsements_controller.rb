@@ -7,7 +7,7 @@ class EndorsementsController < ApplicationController
     # When adding the first record, Endorsement.maximum returns nil, so || is used as a default value
     @endorsement = Endorsement.new(position: (Endorsement.maximum("position") || 0) + 1)
     @endorsement.save
-    @endorsements = Endorsement.all
+    @endorsements = Endorsement.order("position")
 
     respond_to do |format|
       format.html { redirect_to :back }
@@ -31,8 +31,6 @@ class EndorsementsController < ApplicationController
     params[:endorsements].each_with_index do |endorsement, index|
       Endorsement.where(id: endorsement[0]).update_all(quote: endorsement[1][:quote], position: index + 1)
     end
-
-    # Endorsement.update(params[:endorsements].keys, params[:endorsements].values)
 
     records_destroyed_count = destroy_empties
 
