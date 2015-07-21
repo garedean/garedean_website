@@ -1,0 +1,20 @@
+<%= form_tag update_multiple_endorsements_path, id: "update_multiple", data: {update_url: sort_endorsements_path}, method: :put do %>
+
+  <div id="sortable_elements_wrapper">
+    <% @endorsements.each do |endorsement| %>
+      <%= fields_for "endorsements[]", endorsement do |f| %>
+        <div class="form-group" id="endorsement_<%= endorsement.id %>">
+          <%= f.text_area :quote, class:"form-control" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %>
+
+  <% if @endorsements.any? %>
+    <div class="actions">
+      <%= submit_tag "Update", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>

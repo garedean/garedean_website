@@ -4,12 +4,14 @@ class EndorsementsController < ApplicationController
   end
 
   def create
-    @endorsement = Endorsement.new(endorsement_params)
-    @endorsement.position = Endorsement.maximum("position") + 1
-    if @endorsement.save
-      redirect_to :back, notice: "Reference added! (to the end)"
-    else
-      redirect_to :back, alert: "Something went wrong, try again."
+    # When adding the first record, Endorsement.maximum returns nil, so || is used as a default value
+    @endorsement = Endorsement.new(position: (Endorsement.maximum("position") || 0) + 1)
+    @endorsement.save
+    @endorsements = Endorsement.all
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js
     end
   end
 
