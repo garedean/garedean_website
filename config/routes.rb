@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root "static_pages#landing_page"
   resources :projects
   resources :blogs
+  resources :contacts, only: [:new, :create]
 
   resources :endorsements, only: [:index, :create, :destroy] do
     collection do
@@ -17,13 +18,9 @@ Rails.application.routes.draw do
     end
   end
 
-  #get 'references/all/edit', to: 'references#edit_all', :as => :edit_all
-  #put 'references/all' => 'references#update_all', :as => :update_all
-
   # For later development, not in use
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
-  get '/contact',    to: 'static_pages#contact'
-
-
+  get '/contact', to: 'contacts#new', as: 'contact'
+  post '/contacts', to: 'contacts#create'
 end

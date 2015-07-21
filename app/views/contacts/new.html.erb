@@ -9,9 +9,10 @@
 
 <div id="message-contact-wrapper">
   Let's talk!<br>
-  <%= bootstrap_form_for "#" do |f| %>
-    <%= f.text_field :name, hide_label: true, placeholder: "Name" %>
-    <%= f.text_area :message, hide_label: true, placeholder: "Message" %>
-    <%= f.submit %>
+  <%= bootstrap_form_tag url: '/contacts' do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :email %>
+    <%= f.text_area :message %>
+    <%= f.submit "Send" %>
   <% end %>
 </div>
