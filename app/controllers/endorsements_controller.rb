@@ -6,8 +6,11 @@ class EndorsementsController < ApplicationController
   def create
     @endorsement = Endorsement.new(endorsement_params)
     @endorsement.position = Endorsement.maximum("position") + 1
-    @endorsement.save
-    redirect_to :back
+    if @endorsement.save
+      redirect_to :back, notice: "Reference added! (to the end)"
+    else
+      redirect_to :back, alert: "Something went wrong, try again."
+    end
   end
 
   def destroy
@@ -23,8 +26,8 @@ class EndorsementsController < ApplicationController
 
   def update_multiple
 
-    params[:endorsements].each_with_index do |id, index|
-      Endorsement.where(id: id).update_all(position: index + 1)
+    params[:endorsements].each_with_index do |endorsement, index|
+      Endorsement.where(id: endorsement[0]).update_all(quote: endorsement[1][:quote], position: index + 1)
     end
 
     # Endorsement.update(params[:endorsements].keys, params[:endorsements].values)
