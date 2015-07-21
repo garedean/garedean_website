@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "the add comments functionality" do
+describe "the add comments functionality", js: true do
 	it "adds a comment" do
 		blog = FactoryGirl.create(:blog)
 		visit blog_path(blog)
