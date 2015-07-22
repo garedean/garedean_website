@@ -1,4 +1,7 @@
 class EndorsementsController < ApplicationController
+  before_filter :authenticate_user!,
+    :only => [:edit_multiple, :update_multiple]
+
   def index
     @endorsements = Endorsement.order("position")
   end

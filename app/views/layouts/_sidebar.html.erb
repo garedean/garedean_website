@@ -27,9 +27,8 @@
 
   <span class="edit-logout-links">
     <% if user_signed_in? %>
-      Logged in as ADMIN
-      <br>
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
+      ADMIN | 
+      <%#= link_to 'Edit profile', edit_user_registration_path %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     <% end %>
   </span>
