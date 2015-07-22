@@ -2,8 +2,6 @@ class ProjectsController < ApplicationController
   before_filter :authenticate_user!,
     :except => [:index]
 
-  before_action :verify_is_admin, except: [:index]
-
   def index
     @projects = Project.all
   end
