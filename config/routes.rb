@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => :registrations
-  
-  #devise_for :users
-  # as :user do
-  #   get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
-  #   put 'users' => 'devise/registrations#update', :as => 'user_registration'
-  # end
+  devise_for :users
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', :as => 'user_registration'
+  end
 
   root "static_pages#landing_page"
   resources :projects
@@ -23,6 +21,6 @@ Rails.application.routes.draw do
   # For later development, not in use
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
-  get '/contact', to: 'contacts#new', as: 'contact'
-  post '/contacts', to: 'contacts#create'
+  get '/contact',    to: 'contacts#new', as: 'contact'
+  post '/contacts',  to: 'contacts#create'
 end
