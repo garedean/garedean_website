@@ -1,9 +1,4 @@
-//$("#endorsements_form_wrapper").html("<%= escape_javascript(render('form')) %>");
+$("#endorsements_form_wrapper").html("<%= escape_javascript(render('form')) %>");
 
-<div class="form-group ui-sortable-handle">
-  <textarea class="form-control" name="endorsements[111][quote]" id="endorsements_111_quote" data-autosize-on="true" style="overflow: hidden; word-wrap: break-word; height: 52px;">
-
-  </textarea>
-</div>
 //Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists
 $("#sortable_elements_wrapper").sortable({axis: 'y'});

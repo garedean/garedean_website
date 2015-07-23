@@ -11,8 +11,7 @@
     <% end %>
   </div>
 
-  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %><br>
-  <%= link_to "Add reference with update", id="add-update-endorsement", remote: true %>
+  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %>
 
   <% if @endorsements.any? %>
     <div class="actions">
