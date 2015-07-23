@@ -423,7 +423,7 @@ textarea {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .fixed-column {
-    width: 600px;
+    max-width: 600px;
   }
 }
 

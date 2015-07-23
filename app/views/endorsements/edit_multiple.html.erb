@@ -15,6 +15,15 @@
   <%= render "form" %>
 </div>
 
+<% if admin? %>
+  <footer>
+    <span class="pull-right footer-links">
+      <%= link_to "Update", endorsements_path %> |
+    <span>
+  </footer>
+<% end %>
+
+
 <!-- Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists  -->
 <script>
   $("#sortable_elements_wrapper").sortable({axis: 'y'});
