@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Garrett Olson - Code Wizard</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+<head>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <title>Garrett Olson - Code Wizard</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-    <style>
-      @keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-      }
+  <style>
+    @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
 
-      .backdrop {
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-      }
+    .backdrop {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
 
-      .hero-wrapper h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 4em;
-        margin-top: 0px;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
+    .hero-wrapper h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4em;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-      .navbar {
-        display: none;
-        background: transparent;
-      }
+    .navbar {
+      display: none;
+      background: transparent;
+    }
 
-      .lead {
-        margin-top: 20px;
-      }
+    .lead {
+      margin-top: 20px;
+    }
 
-      .hero-wrapper {
-        position: absolute;
-        top: -50px;
-        left: 0px;
-        bottom: 0px;
-        right: 0px;
-        margin: auto;
-        max-height: 230px;
-        max-width: 800px;
-        -webkit-animation: fadein 1.5s;
-           -moz-animation: fadein 1.5s;
-            -ms-animation: fadein 1.5s;
-             -o-animation: fadein 1.5s;
-                animation: fadein 1.5s;
-      }
-    </style>
-  </head>
-  <body>
+    .hero-wrapper {
+      position: absolute;
+      top: -50px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      margin: auto;
+      max-height: 230px;
+      max-width: 800px;
+      -webkit-animation: fadein 1.5s;
+         -moz-animation: fadein 1.5s;
+          -ms-animation: fadein 1.5s;
+           -o-animation: fadein 1.5s;
+              animation: fadein 1.5s;
+    }
+  </style>
+</head>
+<body>
 
-  <div class="backdrop container">
-    <div class="overlay"></div>
+<div class="backdrop container">
+  <div class="overlay"></div>
 
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 hero-wrapper">
-        <h1>GARRETT OLSON ―</h1>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 hero-wrapper">
+      <h1>GARRETT OLSON ―</h1>
 
-        <i class="lead">
-          I am Garrett Olson, a California-born web developer and designer currently based in Portland. I love designing and building web apps that are attractive, simple, and fun to use.
-        </i>
-      </div>
+      <i class="lead">
+        I am Garrett Olson, a California-born web developer and designer currently based in Portland. I love designing and building web apps that are attractive, simple, and fun to use.
+      </i>
     </div>
   </div>
+</div>
 
-  <div class="clip-circle">
+<div class="clip-circle">
 
-    <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <span class="glyphicon glyphicon-menu-hamburger"></span>
 
-    <%= render "layouts/sidebar" %>
+  <%= render "layouts/sidebar" %>
 
-    <div class="content-container">
-      <div class="fixed-column">
+  <div class="content-container">
+    <div class="fixed-column">
 
-        <%= yield %>
+      <%= yield %>
 
-      </div>
     </div>
   </div>
+</div>
 
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-  </body>
+</body>
 </html>
