@@ -18,12 +18,6 @@ class EndorsementsController < ApplicationController
     end
   end
 
-  def destroy
-    @endorsement = Endorsement.find(params[:id])
-    @endorsement.destroy
-    redirect_to :back
-  end
-
   def edit_multiple
     @endorsements = Endorsement.order("position")
     @endorsement = Endorsement.new

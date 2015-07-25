@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog = find_blog
     @blog.destroy
-    redirect_to blogs_path, notice: "Post deleted"
+    redirect_to blogs_path, notice: "Post deleted!"
   end
 
   def edit
