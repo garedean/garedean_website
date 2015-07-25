@@ -39,9 +39,10 @@
 <script>
   $('textarea').blur(function() {
     // check if the textarea has anything typed into it
-    if ($(this).val())
+    if ($(this).val()) {
       $(this).parent().addClass('used');
-    else
+    } else {
       $(this).parent().removeClass('used');
+    }
   });
 </script>
