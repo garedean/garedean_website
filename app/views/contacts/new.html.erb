@@ -2,17 +2,46 @@
   <h1 class="page-heading text-center">Contact</h1>
 </header>
 
-<div id="github-contact-wrapper">
+<!-- <div id="github-contact-wrapper">
   <%= image_tag "gh_logo.png" %>
   <a href="https://github.com/garedean?tab=repositories" class="github-link" target="_blank">https://github.com/garedean</a>
-</div>
+</div> -->
+
+<br>
 
 <div id="message-contact-wrapper">
-  Let's talk!<br>
   <%= bootstrap_form_tag url: '/contacts' do |f| %>
-    <%= f.text_field :name %>
-    <%= f.text_field :email %>
-    <%= f.text_area :message %>
+    <div class="inline-group clearfix">
+      <div class="group">
+        <input type="text" required>
+        <label>Name</label>
+      </div>
+
+      <div class="group">
+        <input type="text" required>
+        <label>Email</label>
+      </div>
+    </div>
+
+    <div class="group">
+      <textarea type="text" required>
+      </textarea>
+      <label>Message</label>
+    </div>
+
+    <%#= f.text_field :name %>
+    <%#= f.text_field :email %>
+    <%#= f.text_area :message %>
     <%= f.submit "Send" %>
   <% end %>
 </div>
+
+<script>
+  $('textarea').blur(function() {
+    // check if the textarea has anything typed into it
+    if ($(this).val())
+      $(this).parent().addClass('used');
+    else
+      $(this).parent().removeClass('used');
+  });
+</script>
