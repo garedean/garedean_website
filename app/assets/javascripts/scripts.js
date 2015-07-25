@@ -10,7 +10,7 @@ $(function() {
 
   //$(".flash").delay(1500).slideUp(500);
   $(".flash").delay(1500).animate({
-    top: "-25",
+    top: "-26",
   }, 900, "easeOutBounce" );
 
   $(document).on("page:change", function() {
