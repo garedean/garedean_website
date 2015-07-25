@@ -7,12 +7,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+  <!-- Material Design Lite files -->
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-pink.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
   <style>
     <%= yield(:custom_styles) %>
   </style>
 
-  <!-- Use Google reCaptcha to prevent spam -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>

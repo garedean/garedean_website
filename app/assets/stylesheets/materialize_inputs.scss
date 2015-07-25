@@ -2,65 +2,71 @@
 
 /* INPUTS ======================================= */
 
-.group {
-  position: relative;
-  margin-bottom:45px;
-}
-
-.inline-group {
+  #message-contact-wrapper {
   .group {
-    float: left;
-    width: 50%;
+    position: relative;
+    margin-bottom:45px;
   }
-}
 
-input,
-textarea {
-  font-size: 18px;
-  padding: 10px 10px 10px 0px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #e3e3e3;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
+  .inline-group {
+    .group {
+      float: left;
+      width: 50%;
+    }
+  }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #337ab7;
-}
+  input,
+  textarea {
+    width: 100%;
+  }
 
-/* LABEL ======================================= */
+  input:not([type='submit']),
+  textarea {
+    font-size: 18px;
+    padding: 10px 10px 10px 0px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
 
-.group label {
-  color: #999;
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  top:10px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-}
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #337ab7;
+  }
 
-/* active state */
-input:focus ~ label,
-input:valid ~ label,
-textarea:focus ~ label {
-  top:-20px;
-  font-size:14px;
-  color: #337ab7;
-}
+  /* LABEL ======================================= */
 
-.used {
-  label {
+  .group label {
+    color: #999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label,
+  textarea:focus ~ label {
     top:-20px;
     font-size:14px;
     color: #337ab7;
+  }
+
+  .used {
+    label {
+      top:-20px;
+      font-size:14px;
+      color: #337ab7;
+    }
   }
 }
