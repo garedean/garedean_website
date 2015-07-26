@@ -12,8 +12,8 @@ gem 'turbolinks'
 gem 'pry', :require => 'pry'
 gem 'bootstrap_form'
 gem 'devise'
-gem "recaptcha", :require => "recaptcha/rails"
 gem 'letter_opener', '~> 1.4.1'
+gem "figaro"
 
 group :development do
   gem 'byebug'

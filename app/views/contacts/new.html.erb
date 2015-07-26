@@ -13,18 +13,18 @@
   <%= bootstrap_form_tag url: '/contacts' do |f| %>
     <div class="inline-group clearfix">
       <div class="group">
-        <input type="text" maxlength="50" required>
+        <input type="text" name="name" maxlength="50" required>
         <label>Name</label>
       </div>
 
       <div class="group">
-        <input type="text" maxlength="100" required>
+        <input type="text" name="email" maxlength="100" required>
         <label>Email</label>
       </div>
     </div>
 
     <div class="group">
-      <textarea type="text" maxlength="3000" required></textarea>
+      <textarea type="text" name="message" maxlength="3000" required></textarea>
       <label>Message</label>
     </div>
 
