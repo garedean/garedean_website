@@ -10,7 +10,7 @@
 
 <div id="message-contact-wrapper">
   <%= bootstrap_form_tag url: '/contacts' do |f| %>
-    <div class="inline-group clearfix">
+    <div id="name-email-inputs" class="inline-group clearfix">
       <div class="group">
         <input type="text" name="name" maxlength="50" required>
         <label>Name</label>
@@ -23,13 +23,10 @@
     </div>
 
     <div class="group">
-      <textarea type="text" name="message" maxlength="3000" required></textarea>
+      <textarea type="text" name="message" maxlength="3000" rows="2" required></textarea>
       <label>Message</label>
     </div>
 
-    <%#= f.text_field :name %>
-    <%#= f.text_field :email %>
-    <%#= f.text_area :message %>
     <%= f.submit "Send" %>
   <% end %>
 </div>

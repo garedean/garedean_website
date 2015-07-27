@@ -5,7 +5,6 @@
   #message-contact-wrapper {
   .group {
     position: relative;
-    margin-bottom:45px;
   }
 
   .inline-group {
@@ -23,7 +22,7 @@
   input:not([type='submit']),
   textarea {
     font-size: 18px;
-    padding: 10px 10px 10px 0px;
+    padding: 5px 10px 5px 0px;
     display: block;
     border: none;
     border-bottom: 1px solid #e3e3e3;
@@ -39,18 +38,27 @@
     border-bottom-color: #337ab7;
   }
 
+  #name-email-inputs {
+    height: 37px;
+    margin-bottom: 45px;
+  }
+
+  input[type="submit"] {
+    margin-top: 45px;
+  }
+
   /* LABEL ======================================= */
 
   .group label {
     color: #999;
-    font-size:18px;
-    font-weight:normal;
-    position:absolute;
-    pointer-events:none;
-    top:10px;
-    transition:0.2s ease all;
-    -moz-transition:0.2s ease all;
-    -webkit-transition:0.2s ease all;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top: 5px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
   }
 
   /* active state */
