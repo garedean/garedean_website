@@ -25,7 +25,7 @@
   <footer>
     <span class="pull-right footer-links">
       <%= link_to "Edit post", edit_blog_path(@blog) %> |
-      <%= link_to "Delete post", @blog, class:"text-danger", method: :delete %>
+      <%= link_to "Delete post", @blog, class:"text-danger", method: :delete, data: { confirm: "You sure?"} %>
     <span>
   </footer>
 <% end %>
