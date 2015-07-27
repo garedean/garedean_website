@@ -6,6 +6,6 @@ class ContactMailer < ApplicationMailer
     @sender_email = sender_email
     @sender_message = sender_message
 
-    mail to: "garrettdolson@gmail.com", subject: "Garedean.com: new message"
+    mail(to: "garrettdolson@gmail.com", subject: "Garedean.com: new message")
   end
 end
