@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
+      binding.pry
       redirect_to blogs_path, notice: "Post added!"
     else
       render :new
