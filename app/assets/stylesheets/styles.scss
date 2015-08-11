@@ -447,7 +447,10 @@ textarea {
   .fixed-column-inner {
     max-width: 800px !important;
   }
-  * {
-    font-size: 1.1em;
+  body {
+    font-size: 2em !important;
+  }
+  nav {
+    font-size: 1.3em !important;
   }
 }
