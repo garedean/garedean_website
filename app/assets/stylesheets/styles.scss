@@ -434,6 +434,20 @@ textarea {
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
+@media (min-width: 1800px) {
+  nav {
+    width: 200px;
+  }
+  .content-container {
+    margin-left: 250px;
+  }
+  .fixed-column {
+    max-width: 800px;
+  }
+  .fixed-column-inner {
+    max-width: 800px !important;
+  }
+  * {
+    font-size: 1.1em;
+  }
 }
