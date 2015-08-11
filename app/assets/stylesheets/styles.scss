@@ -452,5 +452,8 @@ textarea {
   }
   nav {
     font-size: 1.3em !important;
+    .link-list li {
+      line-height: 40px;
+    }
   }
 }
