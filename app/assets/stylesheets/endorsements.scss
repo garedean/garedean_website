@@ -1,11 +1,11 @@
 .endorsements-list {
   margin-top: 30px;
   font-style: italic;
-  font-size: .80em;
+  font-size: 1em;
   text-align: justify;
   li {
     padding: 10px;
-    width: 70%;
+    width: 60%;
     background: #FAFAFF;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -15,7 +15,7 @@
     text-align: left;
   }
   li:nth-child(even) {
-    margin-left: 30%;
+    margin-left: 40%;
     text-align: right;
   }
 }
