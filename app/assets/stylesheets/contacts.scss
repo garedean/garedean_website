@@ -20,6 +20,10 @@
   }
 
   .material-textarea {
-    height: 54px;
+    min-height: 62px;
+  }
+
+  input[type='submit'] {
+    padding: 10px 20px;
   }
 }
