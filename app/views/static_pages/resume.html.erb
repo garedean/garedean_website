@@ -18,74 +18,80 @@
 
     <hr>
 
-    <div class="experience-block">
-      <p>
-        <strong>EYECUE LAB, Full Stack Web Developer Intern</strong>
-        <em>Portland, OR (July 2015 - Present)</em>
-      </p>
-      <ul>
-        <li>
+    <%= resume_block do %>
+      <%= position_details "EYECUE LAB",
+                           "Full stack Web Developer Intern",
+                           "Portland, OR (July 2015 - Present)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
           Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
-        </li>
-        <li>
+        <% end %>
+        <%= bullet_point do %>
           Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
-        </li>
-      </ul>
-    </div>
+        <% end %>
+      <% end %>
+    <% end %>
 
-    <div class="experience-block">
-      <p>
-        <strong>KINDMIND, Founder & Principle Developer</strong>
-        <em>Portland, OR (2014 - Present)</em>
-      </p>
-      <ul>
-        <li>
+    <%= resume_block do %>
+      <%= position_details "KINDMIND",
+                           "Founder & Principle Developer",
+                           "Portland, OR (2014 - Present)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
           Visionary for the ‘KindMind’ brand and product: using technology to improve the mental health and wellness of the world
-        </li>
-        <li>
+        <% end %>
+
+        <%= bullet_point do %>
           Created unique journaling tool where content auto-expands and flows upward on the page
-        </li>
-        <li>
-          Developed full stack Ruby on Rails code base toward MVP release
-        </li>
-      </ul>
-    </div>
+        <% end %>
 
-    <div class="experience-block">
-      <p>
-        <strong>MINDBODY, QA Software Test Engineer & Scrum Master</strong>
-        <em>San Luis Obispo, CA (June 2013 - March 2015)</em>
-      </p>
-      <ul>
-        <li>
-          Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testing
-        </li>
-        <li>
+        <%= bullet_point do %>
+          Created unique journaling tool where content auto-expands and flows upward on the page
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= position_details "MINDBODY",
+                           "QA Software Test Engineer & Scrum Master",
+                           "San Luis Obispo, CA (June 2013 - March 2015)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
+          Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testin
+        <% end %>
+
+        <%= bullet_point do %>
           Lead eight professionals on two teams as Scrum Master—guided teams toward agile development practices, planned and facilitated team meetings, served as the voice of the team to management
-        </li>
-        <li>
-          Served as Scrum Master for the most significant product redesign in the company’s history over a six month period
-        </li>
-      </ul>
-    </div>
+        <% end %>
 
-    <div class="experience-block">
-      <p>
-        <strong>MINDBODY, QA Software Test Technician</strong>
-        <em>San Luis Obispo, CA (June 2011 - June 2013)</em>
-      </p>
-      <ul>
-        <li>
+        <%= bullet_point do %>
+          Served as Scrum Master for the most significant product redesign in the company’s history over a six month period
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= position_details "MINDBODY",
+                           "QA Software Test Technician",
+                           "San Luis Obispo, CA (June 2011 - June 2013)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
           Wrote test cases and manually tested software features toward the goal of delivering bug-free features to 40,000 clients
-        </li>
-        <li>
+        <% end %>
+
+        <%= bullet_point do %>
           #1 in the company for average number of bugs logged each month out of 30 QA professionals and 900 total employees
-        </li>
-        <li>
+        <% end %>
+
+        <%= bullet_point do %>
           #1 in the company for total bugs logged in the tracking system: 1,567
-        </li>
-      </ul>
-    </div>
+        <% end %>
+      <% end %>
+    <% end %>
 
     <div class="experience-block">
       <p>
