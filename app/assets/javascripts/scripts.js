@@ -1,6 +1,6 @@
 $(function() {
   $(".glyphicon-menu-hamburger").click(function(){
-    $(this).fadeOut(700);
+    $(this).hide();
     $(this).parent().addClass("expanded");
   });
 

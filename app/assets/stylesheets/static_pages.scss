@@ -1,3 +1,30 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sidebar-name {
+  padding-left: 20px;
+  font-size: 30px;
+  color: #444;
+  line-height: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#resume-wrapper {
+  border: 1px solid #eee;
+  padding: 20px;
+  font-size: .8em;
+  ul {
+    padding-left: 20px;
+    font-size: .9em;
+    li {
+      list-style-type: disc;
+    }
+  }
+  hr {
+    margin: 5px;
+  }
+  h1, h2, h3, h4, h5 {
+    color: navy;
+  }
+}

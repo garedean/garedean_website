@@ -14,6 +14,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'letter_opener', '~> 1.4.1'
 gem "figaro"
+gem 'htmlbeautifier'
 
 group :development do
   gem 'byebug'

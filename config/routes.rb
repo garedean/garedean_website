@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
   get '/contact',    to: 'contacts#new', as: 'contact'
+  get '/resume',     to: 'static_pages#resume'
   post '/contacts',  to: 'contacts#create'
 end
