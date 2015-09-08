@@ -12,35 +12,30 @@
 </header>
 
 <ul class="project-list">
-
   <li>
     Check out <a href="https://github.com/garedean?tab=repositories" class="github-link" target="_blank">my work</a> on GitHub.
   </li>
 
   <% @projects.each do |project| %>
     <li id="project_<%= project.id %>">
-      <p>
-        <%= link_to "#{project.name}:", "https://#{project.url}", target: "_blank" %>
-        <%= project.description %>
-      </p>
-
-      <% if admin? %>
-        <p class="clearfix">
-          <span class="edit-delete-wrapper pull-right">
-            <%= link_to "Edit", edit_project_path(project) %>
-            |
-            <%= link_to "Delete", project_path(project), :data => {confirm: "Sure you want to delete this?", method: "delete"}, class: "text-danger" %>
-          <span>
-        </p>
-      <% end %>
+      <%= link_to "#{project.name}:", "#{project.url}", target: "_blank" %>
+      <%= project.description %>
     </li>
   <% end %>
 </ul>
 
 <% if admin? %>
   <footer>
+    <span class="pull-right footer-links">
+      <%= admin_link_to "Add / Edit", edit_multiple_projects_path %>
+    </span>
+  </footer>
+<% end %>
+
+<!-- <% if admin? %>
+  <footer>
     <%= link_to new_project_path, class: "add pull-right" do %>
       <span class="glyphicon glyphicon-plus"></span>
     <% end %>
   </footer>
-<% end %>
+<% end %> -->

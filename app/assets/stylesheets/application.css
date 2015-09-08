@@ -15,6 +15,7 @@
  *= require endorsements
  *= require materialize_inputs
  *= require contacts
+ *= require projects
  *= require styles
  *= require static_pages
  */

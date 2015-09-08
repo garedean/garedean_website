@@ -17,3 +17,9 @@ $(function() {
     autosize($('textarea'));
 	});
 });
+
+$(document).on("page:change", function() {
+  $('#submit-form-link').click(function() {
+    $('form').submit();
+  });
+});

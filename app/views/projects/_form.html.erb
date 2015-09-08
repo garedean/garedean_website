@@ -1,9 +1,21 @@
-<%= bootstrap_form_for @project do |f| %>
-  <%= f.text_field :name %> 
+<%= form_tag update_multiple_projects_path, id: "update_multiple", method: :put do %>
+  <div id="sortable_elements_wrapper">
+    <% @projects.each do |project| %>
+      <div>
+        <%= fields_for "projects[]", project do |f| %>
+          <div class="form-group">
+            <%= f.text_field :name, class:"form-control", placeholder: "Project name..." %>
+          </div>
 
-  <%= f.text_area :description %>
+          <div class="form-group">
+            <%= f.text_area :description, class:"form-control", placeholder: "Project description..." %>
+          </div>
 
-  <%= f.text_field :url, prepend: "http://" %>
-
-  <%= f.primary yield(:submit_text) %>
+          <div class="form-group">
+            <%= f.text_field :url, class:"form-control", placeholder: "https://www.example.com/" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 <% end %>

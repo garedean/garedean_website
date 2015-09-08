@@ -6,22 +6,26 @@ Rails.application.routes.draw do
   end
 
   root "static_pages#landing_page"
-  resources :projects
+
   resources :blogs
   resources :contacts, only: [:new, :create]
+
+  resources :projects do
+    collection do
+      get :edit_multiple
+      put :update_multiple
+    end
+  end
 
   resources :endorsements, only: [:index, :create, :destroy] do
     collection do
       get :edit_multiple
       put :update_multiple
-      post :sort
     end
   end
 
-  # For later development, not in use
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
   get '/contact',    to: 'contacts#new', as: 'contact'
   get '/resume',     to: 'static_pages#resume'
-  post '/contacts',  to: 'contacts#create'
 end

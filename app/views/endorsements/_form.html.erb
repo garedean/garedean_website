@@ -1,5 +1,4 @@
-<%= form_tag update_multiple_endorsements_path, id: "update_multiple", data: {update_url: sort_endorsements_path}, method: :put do %>
-
+<%= form_tag update_multiple_endorsements_path, id: "update_multiple", method: :put do %>
   <div id="sortable_elements_wrapper">
     <% @endorsements.each do |endorsement| %>
       <%= fields_for "endorsements[]", endorsement do |f| %>

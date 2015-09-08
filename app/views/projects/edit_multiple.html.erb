@@ -1,0 +1,28 @@
+<header class="page-header">
+  <h1 class="text-center">Work</h1>
+</header>
+
+<p class="text-center">
+  <i class="text-xs">
+    —To delete a project, erase all content from text area and update—<br>
+    —To change order, drag project to desired position and update—
+  </i>
+</p>
+
+<div id="update_multiple_form_wrapper">
+  <%= render "form" %>
+</div>
+
+<% if admin? %>
+  <footer>
+    <span class="pull-right footer-links">
+      <%= link_to "Add Project", Project.new, id:"add-reference-link", class: "clickable", method: :post, remote: true %> |
+      <span id="submit-form-link" class="clickable">Update Projects<span>
+    <span>
+  </footer>
+<% end %>
+
+<!-- Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists  -->
+<script>
+  $("#sortable_elements_wrapper").sortable({axis: 'y'});
+</script>
