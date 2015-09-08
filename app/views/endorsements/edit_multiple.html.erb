@@ -18,7 +18,8 @@
 <% if admin? %>
   <footer>
     <span class="pull-right footer-links">
-      <%= link_to "Update", endorsements_path %> |
+      <%= link_to "Add reference", Endorsement.new, id:"add-reference-link", class: "clickable", method: :post, remote: true %> |
+      <span id="update-references-link" class="clickable">Update References<span>
     <span>
   </footer>
 <% end %>

@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery.autosize
+//= endorsements
 //= require_tree .

@@ -10,12 +10,4 @@
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "Add reference", Endorsement.new, method: :post, remote: true %>
-
-  <% if @endorsements.any? %>
-    <div class="actions">
-      <%= submit_tag "Update", class: "btn btn-primary" %>
-    </div>
-  <% end %>
 <% end %>

@@ -395,6 +395,12 @@ textarea {
   z-index: 9998;
 }
 
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 /* Scroll Bar Styling
 /* ---------------------------------------------*/
 
