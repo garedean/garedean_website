@@ -1,37 +1,9 @@
 <div id="resume-wrapper">
-
-  <div class="row">
-    <div class="col-md-6">
-      <h3>Garrett Olson</h3>
-      <h5>Web Developer</h5>
-    </div>
-
-    <div class="col-md-6 x-small">
-      20 NW 16th Ave. #301, Portland, OR 97209
-      805.835.3610 ▪ garrett.olson@kindmind.com ▪ www.garedean.com
-    </div>
-  </div>
-
   <section>
 
-    <h4>Employment</h4>
+    <h3>Employment</h3>
 
     <hr>
-
-    <%= resume_block do %>
-      <%= position_details "EYECUE LAB",
-                           "Full stack Web Developer Intern",
-                           "Portland, OR (July 2015 - Present)" %>
-
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
-        <% end %>
-        <%= bullet_point do %>
-          Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
-        <% end %>
-      <% end %>
-    <% end %>
 
     <%= resume_block do %>
       <%= position_details "KINDMIND",
@@ -54,13 +26,28 @@
     <% end %>
 
     <%= resume_block do %>
+      <%= position_details "EYECUE LAB",
+                           "Full Stack Web Developer Intern",
+                           "Portland, OR (July 2015 - Present)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
+          Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
+        <% end %>
+        <%= bullet_point do %>
+          Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
       <%= position_details "MINDBODY",
                            "QA Software Test Engineer & Scrum Master",
                            "San Luis Obispo, CA (June 2013 - March 2015)" %>
 
       <%= position_highlights do %>
         <%= bullet_point do %>
-          Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testin
+          Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testing
         <% end %>
 
         <%= bullet_point do %>
@@ -132,7 +119,7 @@
 
   <section>
 
-    <h4>Education</h4>
+    <h3>Education</h3>
 
     <hr>
 
@@ -162,7 +149,7 @@
   </section>
 
   <section>
-    <h4>Additional Experience</h4>
+    <h3>Additional Experience</h3>
 
     <hr>
 
@@ -177,10 +164,10 @@
   </section>
 
   <section>
-    <h4>Languages and Technologies</h4>
+    <h3>Languages and Technologies</h3>
 
     <hr>
 
-      Ruby, Ruby on Rails, C#, .NET, JavaScript, jQuery, SQL, Git, Selenium, Capybara, Cucumber, HTML, CSS
+      Ruby & Ruby on Rails, C# & .NET, JavaScript, jQuery, SQL, Git, Selenium, Capybara, Cucumber, HTML, CSS
   </section>
 </div>
