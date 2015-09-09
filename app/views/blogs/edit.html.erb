@@ -5,3 +5,12 @@
 <% content_for(:submit_text, "Update") %>
 
 <%= render "form" %>
+
+<% if admin? %>
+  <footer>
+    <div class="pull-right footer-links">
+      <a href="#" id="submit-form-link" class="clickable">Update Post<span>
+    </div>
+    <span>
+  </footer>
+<% end %>
