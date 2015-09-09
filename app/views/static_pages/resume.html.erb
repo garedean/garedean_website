@@ -1,9 +1,38 @@
+<header class="page-header">
+  <h1 class="text-center">Resume</h1>
+</header>
+
 <div id="resume-wrapper">
   <section>
+    <div class="row">
+      <h3>Experience</h3>
+    </div>
 
-    <h3>Employment</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <p class="job-summary">
+          <p class="company-name">KINDMIND</p>
+          <p class="job-details">Portland, OR</p>
+          <p>2014 - Present</p>
+        </p>
+      </div>
 
-    <hr>
+      <div class="col-md-8">
+        <span class="job-title">Founder &amp; Principle Developer </span>
+        <ul class="bullet-list">
+          <li>
+            Visionary for the ‘KindMind’ brand and product: <i>using technology to improve the mental health and wellness of the world</i>
+          </li>
+
+          <li>
+            Implemented all aspects of site functionality: landing page, site tours, user authentication, and innovative tools used for journaling and examiningthought patterns
+          </li>
+          <li>
+            Developed full stack Ruby on Rails code base toward MVP release
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <%= resume_block do %>
       <%= position_details "KINDMIND",
@@ -81,41 +110,45 @@ thought patterns
       <% end %>
     <% end %>
 
-    <div class="experience-block">
-      <p>
-        <strong>TARGET, Front End Team Leader</strong>
-        <em>San Luis Obispo, CA (January 2011 - June 2011)</em>
-      </p>
-      <ul>
-        <li>
-          Managed 50 team members, two supervisors, and four departments in a store producing $30 million in annual revenue
-        </li>
-        <li>
-          Promoted a 'fast and friendly' culture to best serve our guests and a positive, upbeat work environment for team members
-        </li>
-        <li>
-          #1 in the company for total bugs logged in the tracking system: 1,567
-        </li>
-      </ul>
-    </div>
+    <%= resume_block do %>
+      <%= position_details "TARGET",
+                           "Front End Team Leader",
+                           "San Luis Obispo, CA (January 2011 - June 2011)" %>
 
-    <div class="experience-block">
-      <p>
-        <strong>TARGET, Assets Protection Leader</strong>
-        <em>San Luis Obispo, CA (2010 - 2011)</em>
-      </p>
-      <ul>
-        <li>
+      <%= position_highlights do %>
+        <%= bullet_point do %>
+          Managed 50 team members, two supervisors, and four departments in a store producing $30 million in annual revenue
+        <% end %>
+
+        <%= bullet_point do %>
+          Promoted a 'fast and friendly' culture to best serve our guests and a positive, upbeat work environment for team members
+        <% end %>
+
+        <%= bullet_point do %>
+          #1 in the company for total bugs logged in the tracking system: 1,567
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= position_details "TARGET",
+                           "Assets Protection Leader",
+                           "San Luis Obispo, CA (2010 - 2011)" %>
+
+      <%= position_highlights do %>
+        <%= bullet_point do %>
           Lead all asset protection activities and training in store toward minimizing company losses
-        </li>
-        <li>
+        <% end %>
+
+        <%= bullet_point do %>
           Educated 200 team members about asset protection through regular ‘huddle’ talks and partnerships with each department
-        </li>
-        <li>
+        <% end %>
+
+        <%= bullet_point do %>
           Managed a complex network of 60 cameras, including regular installations of new equipment and upkeep of existing equipment
-        </li>
-      </ul>
-    </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </section>
 
   <section>

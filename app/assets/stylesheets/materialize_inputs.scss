@@ -24,7 +24,7 @@
         &:focus {
           outline: none;
           border-bottom-width: 2px;
-          border-bottom-color: #337ab7;
+          border-bottom-color: #0099cc;
         }
       }
     }
@@ -68,14 +68,14 @@
   textarea:focus ~ label {
     top:-20px;
     font-size:14px;
-    color: #337ab7;
+    color: #0099cc;
   }
 
   .used {
     label {
       top:-20px;
       font-size:14px;
-      color: #337ab7;
+      color: #0099cc;
     }
   }
 }

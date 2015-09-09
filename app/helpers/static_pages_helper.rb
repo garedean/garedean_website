@@ -4,11 +4,11 @@ module StaticPagesHelper
   end
 
   def position_details(company_name, job_title, details)
-    company_name = content_tag(:strong, "#{company_name }, ")
-    job_title    = content_tag(:strong, "#{job_title} ")
-    details      = content_tag(:em, details)
+    company_name = content_tag(:span, "#{company_name }, ", class:'company-name')
+    job_title    = content_tag(:span, "#{job_title} ", class: 'job-title')
+    details      = content_tag(:em, details, class: 'job-details')
     content = company_name + job_title + details
-    content_tag(:p, content)
+    content_tag(:p, content, class: 'job-summary')
   end
 
   def position_highlights(&block)
