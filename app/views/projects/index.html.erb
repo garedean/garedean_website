@@ -12,10 +12,6 @@
 </header>
 
 <ul class="project-list">
-  <li>
-    Check out <a href="https://github.com/garedean?tab=repositories" class="github-link" target="_blank">my work</a> on GitHub.
-  </li>
-
   <% @projects.each do |project| %>
     <li id="project_<%= project.id %>">
       <%= link_to "#{project.name}:", "#{project.url}", target: "_blank" %>
@@ -31,11 +27,3 @@
     </span>
   </footer>
 <% end %>
-
-<!-- <% if admin? %>
-  <footer>
-    <%= link_to new_project_path, class: "add pull-right" do %>
-      <span class="glyphicon glyphicon-plus"></span>
-    <% end %>
-  </footer>
-<% end %> -->

@@ -1,14 +1,24 @@
 module StaticPagesHelper
   def resume_block(&block)
-    content_tag :div, &block
+    content_tag :div, class: "row", &block
   end
 
-  def position_details(company_name, job_title, details)
-    company_name = content_tag(:span, "#{company_name }, ", class:'company-name')
-    job_title    = content_tag(:span, "#{job_title} ", class: 'job-title')
-    details      = content_tag(:em, details, class: 'job-details')
-    content = company_name + job_title + details
-    content_tag(:p, content, class: 'job-summary')
+  def left_column(company_name, job_location, job_time_period)
+    content_tag :div, class: "col-md-4" do
+      concat content_tag(:p, company_name,       class: 'company-name')
+      concat content_tag(:p, job_location,       class: 'job-location')
+      concat content_tag(:p, job_time_period, class: 'job-time-period')
+    end
+  end
+
+  def right_column(&block)
+    content_tag :div, class: "col-md-8" do
+      block.call
+    end
+  end
+
+  def job_title(title)
+    content_tag :p, title, class: "job-title"
   end
 
   def position_highlights(&block)

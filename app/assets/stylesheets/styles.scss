@@ -6,20 +6,19 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: 'Open Sans', sans-serif;
+  color: #444;
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif !important;
   margin-bottom: 20px;
   color: #0099cc;
-}
-
-h2 {
-  font-size: 54px;
-  text-align: center;
-  font-weight: 300;
 }
 
 a {
@@ -38,11 +37,12 @@ a {
 nav {
   position: fixed;
   left: 0;
-  width: 150px;
+  width: 180px;
   height: 100vh;
   border-right: 1px solid #e3e3e3;
   padding-top: 30px;
-  font-size: 18px;
+  font-size: 1.2em;
+  line-height: 1.5em;
 }
 
 .page-header {
@@ -55,7 +55,8 @@ nav {
 
 .content-container {
   height: 100%;
-  margin-left: 150px;
+  line-height: 1.5em;
+  margin-left: 180px;
   padding-top: 30px;
   padding-bottom: 100px;
   overflow-y: scroll;
@@ -96,7 +97,6 @@ ul {
 
 .link-list li {
   list-style-type: none;
-  line-height: 30px;
   margin-left: 0;
 }
 
@@ -432,6 +432,13 @@ textarea {
 /* ---------------------------------------------*/
 
 /* Small devices (tablets, 768px and up) */
+@media (min-width: 1030px) {
+  .container {
+    width: 850px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .fixed-column {
     max-width: 600px;
@@ -446,27 +453,15 @@ textarea {
   }
 }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Extra Large Screens (large desktops, 1800px and up) */
 @media (min-width: 1800px) {
   nav {
-    width: 200px;
+    width: 220px;
   }
   .content-container {
-    margin-left: 250px;
-  }
-  .fixed-column {
-    max-width: 800px;
-  }
-  .fixed-column-inner {
-    max-width: 800px !important;
+    margin-left: 220px;
   }
   body {
-    font-size: 2em !important;
-  }
-  nav {
-    font-size: 1.3em !important;
-    .link-list li {
-      line-height: 40px;
-    }
+    font-size: 1.2em;
   }
 }

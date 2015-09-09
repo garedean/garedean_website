@@ -4,204 +4,217 @@
 
 <div id="resume-wrapper">
   <section>
-    <div class="row">
-      <h3>Experience</h3>
-    </div>
 
-    <div class="row">
-      <div class="col-md-4">
-        <p class="job-summary">
-          <p class="company-name">KINDMIND</p>
-          <p class="job-details">Portland, OR</p>
-          <p>2014 - Present</p>
-        </p>
-      </div>
+    <h2>Experience</h2>
 
-      <div class="col-md-8">
-        <span class="job-title">Founder &amp; Principle Developer </span>
-        <ul class="bullet-list">
-          <li>
-            Visionary for the ‘KindMind’ brand and product: <i>using technology to improve the mental health and wellness of the world</i>
-          </li>
+    <%= resume_block do %>
+      <%= left_column("KINDMIND", "Portland, OR", "2014 – Present") %>
 
-          <li>
-            Implemented all aspects of site functionality: landing page, site tours, user authentication, and innovative tools used for journaling and examiningthought patterns
-          </li>
-          <li>
+      <%= right_column do %>
+        <%= job_title("Founder & Principle Developer") %>
+
+        <%= position_highlights do %>
+          <%= bullet_point do %>
+            Visionary for the KindMind brand and product: <i>using technology to improve the mental health and wellness of the world</i>
+          <% end %>
+
+          <%= bullet_point do %>
+            Implemented all aspects of site functionality: landing page, site tours, user authentication, and innovative tools used for journaling and examining
+      thought patterns
+          <% end %>
+
+          <%= bullet_point do %>
             Developed full stack Ruby on Rails code base toward MVP release
-          </li>
-        </ul>
-      </div>
-    </div>
+          <% end %>
+        <% end %>
+
+      <% end %>
+    <% end %>
 
     <%= resume_block do %>
-      <%= position_details "KINDMIND",
-                           "Founder & Principle Developer",
-                           "Portland, OR (2014 - Present)" %>
+      <%= left_column("EyeCue Lab", "Portland, OR", "Jul 2015 - Sept 2014") %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Visionary for the ‘KindMind’ brand and product: using technology to improve the mental health and wellness of the world
-        <% end %>
+      <%= right_column do %>
+        <%= job_title("Full Stack Web Developer Intern") %>
 
-        <%= bullet_point do %>
-          Implemented all aspects of site functionality: landing page, site tours, user authentication, and innovative tools used for journaling and examining
-thought patterns
-        <% end %>
+        <%= position_highlights do %>
 
-        <%= bullet_point do %>
-          Developed full stack Ruby on Rails code base toward MVP release
+          <%= bullet_point do %>
+            Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
+          <% end %>
+
+          <%= bullet_point do %>
+            Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
+          <% end %>
+
         <% end %>
       <% end %>
     <% end %>
 
     <%= resume_block do %>
-      <%= position_details "EYECUE LAB",
-                           "Full Stack Web Developer Intern",
-                           "Portland, OR (July 2015 - Present)" %>
+      <%= left_column("MINDBODY", "San Luis Obispo, CA", "Jun 2013 - Mar 2015") %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
-        <% end %>
-        <%= bullet_point do %>
-          Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
-        <% end %>
-      <% end %>
-    <% end %>
+      <%= right_column do %>
+        <%= job_title("QA Software Test Engineer & Scrum Master") %>
 
-    <%= resume_block do %>
-      <%= position_details "MINDBODY",
-                           "QA Software Test Engineer & Scrum Master",
-                           "San Luis Obispo, CA (June 2013 - March 2015)" %>
+        <%= position_highlights do %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testing
-        <% end %>
+          <%= bullet_point do %>
+            Designed and developed three web browser automation frameworks that increased testing speed by as much as 40x over manual testing
+          <% end %>
 
-        <%= bullet_point do %>
-          Lead eight professionals on two teams as Scrum Master—guided teams toward agile development practices, planned and facilitated team meetings, served as the voice of the team to management
-        <% end %>
+          <%= bullet_point do %>
+            Lead eight professionals on two teams as Scrum Master—guided teams toward agile development practices, planned and facilitated team meetings, served as the voice of the team to management
+          <% end %>
 
-        <%= bullet_point do %>
-          Served as Scrum Master for the most significant product redesign in the company’s history over a six month period
+          <%= bullet_point do %>
+            Served as Scrum Master for the most significant product redesign in the company’s history over a six month period
+          <% end %>
+
         <% end %>
       <% end %>
     <% end %>
 
     <%= resume_block do %>
-      <%= position_details "MINDBODY",
-                           "QA Software Test Technician",
-                           "San Luis Obispo, CA (June 2011 - June 2013)" %>
+      <%= left_column("MINDBODY", "San Luis Obispo, CA", "Jun 2011 - Jun 2013") %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Wrote test cases and manually tested software features toward the goal of delivering bug-free features to 40,000 clients
-        <% end %>
+      <%= right_column do %>
+        <%= job_title("QA Software Test Technician") %>
 
-        <%= bullet_point do %>
-          #1 in the company for average number of bugs logged each month out of 30 QA professionals and 900 total employees
-        <% end %>
+        <%= position_highlights do %>
 
-        <%= bullet_point do %>
-          #1 in the company for total bugs logged in the tracking system: 1,567
-        <% end %>
-      <% end %>
-    <% end %>
+          <%= bullet_point do %>
+            Wrote test cases and manually tested software features toward the goal of delivering bug-free features to 40,000 clients
+          <% end %>
 
-    <%= resume_block do %>
-      <%= position_details "TARGET",
-                           "Front End Team Leader",
-                           "San Luis Obispo, CA (January 2011 - June 2011)" %>
+          <%= bullet_point do %>
+            #1 in the company for average number of bugs logged each month out of 29 QA professionals and ~1000 total employees
+          <% end %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Managed 50 team members, two supervisors, and four departments in a store producing $30 million in annual revenue
-        <% end %>
+          <%= bullet_point do %>
+            #1 in the company for total number of bugs logged in the tracking system at 1,567
+          <% end %>
 
-        <%= bullet_point do %>
-          Promoted a 'fast and friendly' culture to best serve our guests and a positive, upbeat work environment for team members
-        <% end %>
-
-        <%= bullet_point do %>
-          #1 in the company for total bugs logged in the tracking system: 1,567
         <% end %>
       <% end %>
     <% end %>
 
     <%= resume_block do %>
-      <%= position_details "TARGET",
-                           "Assets Protection Leader",
-                           "San Luis Obispo, CA (2010 - 2011)" %>
+      <%= left_column("Target", "San Luis Obispo, CA", "Jan 2011 – Jun 2011)") %>
 
-      <%= position_highlights do %>
-        <%= bullet_point do %>
-          Lead all asset protection activities and training in store toward minimizing company losses
-        <% end %>
+      <%= right_column do %>
+        <%= job_title("Front End Team Leader") %>
 
-        <%= bullet_point do %>
-          Educated 200 team members about asset protection through regular ‘huddle’ talks and partnerships with each department
-        <% end %>
+        <%= position_highlights do %>
 
-        <%= bullet_point do %>
-          Managed a complex network of 60 cameras, including regular installations of new equipment and upkeep of existing equipment
+          <%= bullet_point do %>
+            Managed 50 team members, two supervisors, and four departments in a store producing $30 million in annual revenue
+          <% end %>
+
+          <%= bullet_point do %>
+            Promoted a 'fast and friendly' culture to best serve our guests and a positive, upbeat work environment for team members
+          <% end %>
+
+          <%= bullet_point do %>
+            #1 in the company for total number of bugs logged in the tracking system at 1,567
+          <% end %>
+
         <% end %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= left_column("Target", "San Luis Obispo, CA", "2010 – 2011") %>
+
+      <%= right_column do %>
+        <%= job_title("Front End Team Leader") %>
+
+        <%= position_highlights do %>
+
+          <%= bullet_point do %>
+            Responsible for storewide asset protection activities
+          <% end %>
+
+          <%= bullet_point do %>
+            Educated 200 team members about asset protection through regular ‘huddle’ talks and partnerships with each department
+          <% end %>
+
+          <%= bullet_point do %>
+            Managed a complex network of 60 cameras and camera server infastructure
+          <% end %>
+
+        <% end %>
+      <% end %>
+    <% end %>
+
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Education</h2>
+
+    <%= resume_block do %>
+      <%= left_column("Epicodus", "Portland, OR", "Apr 2015 — Sept 2015") %>
+
+      <%= right_column do %>
+        <%= job_title("Software development, graduate") %>
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= left_column("Cal Poly State University", "San Luis Obispo, CA", "2010 – 2011") %>
+
+      <%= right_column do %>
+        <%= job_title("B.S. Business Administration") %>
       <% end %>
     <% end %>
   </section>
 
-  <section>
-
-    <h3>Education</h3>
-
-    <hr>
-
-    <div class="experience-block">
-      <p>
-        <strong>EPICODUS</strong>
-        <em>Portland, OR (April 2015 - September 2015)</em>
-      </p>
-      <ul>
-        <li>
-          Software development, graduate
-        </li>
-      </ul>
-    </div>
-
-    <div class="experience-block">
-      <p>
-        <strong>CAL POLY STATE UNIVERSITY</strong>
-        <em>San Luis Obispo, CA (2007-2009)</em>
-      </p>
-      <ul>
-        <li>
-          Bachelor of Science, Business Administration
-        </li>
-      </ul>
-    </div>
-  </section>
+  <hr>
 
   <section>
-    <h3>Additional Experience</h3>
-
-    <hr>
+    <h2>Additional Experience</h2>
 
     <ul>
       <li>
-        Toastmasters Competent Communicator, Competent Leader, past Area Governor, past President
+        <strong>
+          Founder and President, Cal Poly Speakers:
+        </strong>
+        Cal Poly's first Toastmasters club in the university's history
       </li>
       <li>
-        Founder and President of Cal Poly State University’s first Toastmasters club in the university’s history
+        <strong>
+          Competent Communicator Award Recipient:
+        </strong>
+        Toastmasters International
+      </li>
+      <li>
+        <strong>
+          Competent Leader Award Recipient:
+        </strong>
+        Toastmasters International</li>
+      <li>
+        <strong>
+          Area E1 Governor, 2010 – 2011:
+        </strong>
+        Toastmasters International
+      </li>
+      <li>
+        <strong>
+          Past President, Estero Bay Toastmasters:
+        </strong>
+        managed five club officers in a 20-person club
       </li>
     </ul>
   </section>
 
+  <hr>
+
   <section>
-    <h3>Languages and Technologies</h3>
+    <h2>Languages and Technologies</h2>
 
-    <hr>
+    Ruby, Ruby on Rails, C#, .NET, JavaScript, jQuery, SQL, Git, Selenium, Capybara, Cucumber, HTML, CSS
 
-      Ruby & Ruby on Rails, C# & .NET, JavaScript, jQuery, SQL, Git, Selenium, Capybara, Cucumber, HTML, CSS
   </section>
 </div>
