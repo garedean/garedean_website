@@ -60,6 +60,7 @@ nav {
   padding-top: 30px;
   padding-bottom: 100px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ul {
@@ -101,11 +102,19 @@ ul {
 }
 
 .gravatar {
-  height: 110px;
+  height: 6em;
+  width: 6em;
   display: block;
   margin: 30px auto 50px auto;
   border-radius: 100%;
+  background: transparent image-url("portrait_1") center top no-repeat;
+  background-size: cover;
+  transition: background-image .2s;
+  &:hover {
+    background-image: image-url("portrait_2");
+  }
 }
+
 
 .input-group-addon {
   border-radius: 0px;
@@ -424,27 +433,27 @@ textarea {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 1030px) {
-  .container {
-    width: 850px;
-  }
-  #resume-wrapper {
-    .company-name,
-    p.job-title {
-      margin-bottom: .6em;
-      font-weight: 600;
-    }
-    .col-md-4 {
-      span.job-title {
-        display: none;
-        font-weight: 600;
-      }
-    }
-    .col-md-8 {
-      p.job-title {
-        display: block;
-      }
-    }
-  }
+  // .container {
+  //   width: 850px;
+  // }
+  // #resume-wrapper {
+  //   .company-name,
+  //   p.job-title {
+  //     margin-bottom: .6em;
+  //     font-weight: 600;
+  //   }
+  //   .col-md-4 {
+  //     span.job-title {
+  //       display: none;
+  //       font-weight: 600;
+  //     }
+  //   }
+  //   .col-md-8 {
+  //     p.job-title {
+  //       display: block;
+  //     }
+  //   }
+  // }
 }
 
 #social-links-wrapper {
@@ -464,6 +473,28 @@ textarea {
   footer {
     left: initial;
     border-top: 1px solid transparent;
+  }
+
+  .container {
+    width: 812px;
+  }
+  #resume-wrapper {
+    .company-name,
+    p.job-title {
+      margin-bottom: .6em;
+      font-weight: 600;
+    }
+    .col-md-4 {
+      span.job-title {
+        display: none;
+        font-weight: 600;
+      }
+    }
+    .col-md-8 {
+      p.job-title {
+        display: block;
+      }
+    }
   }
 }
 
