@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   root "static_pages#landing_page"
 
   resources :blogs
-  resources :contacts, only: [:new, :create]
 
   resources :projects do
     collection do
@@ -26,6 +25,5 @@ Rails.application.routes.draw do
 
   get '/about',      to: 'static_pages#about'
   get '/blog',       to: 'static_pages#blog'
-  get '/contact',    to: 'contacts#new', as: 'contact'
   get '/resume',     to: 'static_pages#resume'
 end

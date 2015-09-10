@@ -14,7 +14,6 @@
  *= require rails_bootstrap_forms
  *= require endorsements
  *= require materialize_inputs
- *= require contacts
  *= require projects
  *= require static_pages
  *= require resume
