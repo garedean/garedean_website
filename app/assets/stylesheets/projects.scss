@@ -37,10 +37,36 @@
 
 #update_multiple {
   .form-group {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e3e3e3;
     margin-bottom: 0;
   }
   .ui-sortable-handle {
     margin-bottom: 10px;
+  }
+}
+
+#project-tiles-wrapper {
+  hr {
+    margin: 35px 0;
+  }
+  img {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+  }
+  .project-screenshot {
+    margin-bottom: 25px;
+  }
+  .project-details {
+    font-size: .6em;
+    text-align: justify;
+    line-height: 1.2em;
+    font-weight: 400;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 0;
+    }
   }
 }

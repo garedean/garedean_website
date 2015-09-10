@@ -32,6 +32,9 @@ a {
     background: #f1f1f1;
     color: #0099cc;
   }
+  &:focus {
+    color: default;
+  }
 }
 
 nav {
@@ -71,7 +74,7 @@ ul {
 
 .blogs-wrapper {
   li {
-    margin: 15px 0;
+    margin: 30px 0;
     a {
       display: inline-block;
       width: 100%;
@@ -122,6 +125,10 @@ ul {
 p.comment-author {
   font-size: .8em;
   margin-bottom: 0px;
+}
+
+hr {
+  border-top-color: #e3e3e3;
 }
 
 /* Landing Page */
@@ -492,6 +499,16 @@ textarea {
     .col-md-8 {
       p.job-title {
         display: block;
+      }
+    }
+  }
+  #project-tiles-wrapper {
+    .project-screenshot {
+      margin-bottom: 0px
+    }
+    .project-details {
+      p {
+        margin: 0;
       }
     }
   }
