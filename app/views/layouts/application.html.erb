@@ -16,6 +16,17 @@
 
   <body>
 
+    <%= link_to new_user_session_path, class: "login-link" do %>
+    <% end %>
+
+    <span class="edit-logout-links">
+      <% if user_signed_in? %>
+        ADMIN |
+        <%#= link_to 'Edit profile', edit_user_registration_path %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <% end %>
+    </span>
+
     <div class="top-stripe">
     </div>
 

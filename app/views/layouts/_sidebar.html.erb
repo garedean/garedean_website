@@ -25,14 +25,10 @@
     </li>
   </ul>
 
-  <%= link_to new_user_session_path, class: "login-link" do %>
-  <% end %>
+  <p id="social-links-wrapper">
+    <%= link_to "LinkedIn", "https://www.linkedin.com/in/garrettdeanolson" %> /
+    <%= link_to "Github", "https://github.com/garedean" %> /
+    <%= mail_to "garrett.olson@kindmind.com", "Email" %>
+  </p>
 
-  <span class="edit-logout-links">
-    <% if user_signed_in? %>
-      ADMIN |
-      <%#= link_to 'Edit profile', edit_user_registration_path %>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-    <% end %>
-  </span>
 </nav>

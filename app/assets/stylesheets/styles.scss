@@ -323,8 +323,8 @@ input[type="submit"] {
 
 .edit-logout-links {
   position: absolute;
-  bottom: 5px;
-  left: 9px;
+  top: 5px;
+  right: 15px;
   font-size: .8em;
 }
 
@@ -445,6 +445,14 @@ textarea {
       }
     }
   }
+}
+
+#social-links-wrapper {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  font-size: .6em;
+  text-align: center;
+  margin-bottom: 7px;
 }
 
 /* Small devices (tablets, 768px and up) */
