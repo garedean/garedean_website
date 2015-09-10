@@ -107,15 +107,6 @@ ul {
   border-radius: 100%;
 }
 
-.fixed-column {
-  font-size: 1.2em;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  line-height: 1.5em;
-  color: #444;
-}
-
 .input-group-addon {
   border-radius: 0px;
 }
@@ -217,7 +208,7 @@ a.buttonize {
 
 footer {
   position: fixed;
-  bottom: 0; left: 150px; right: 0;
+  bottom: 0; left: 180px; right: 0;
   background: white;
   border-top: 1px solid #e3e3e3;
   height: 50px;
@@ -311,9 +302,9 @@ input[type="submit"] {
   top: 0;
   left: 0;
   right: 0;
-  height: 30px;
+  height: 2em;
   margin: 0;
-  line-height: 30px;
+  line-height: 2em;
   text-align: center;
   font-size: 1.3em;
   color: white;
@@ -436,13 +427,28 @@ textarea {
   .container {
     width: 850px;
   }
+  #resume-wrapper {
+    .company-name,
+    p.job-title {
+      margin-bottom: .6em;
+      font-weight: 600;
+    }
+    .col-md-4 {
+      span.job-title {
+        display: none;
+        font-weight: 600;
+      }
+    }
+    .col-md-8 {
+      p.job-title {
+        display: block;
+      }
+    }
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .fixed-column {
-    max-width: 600px;
-  }
 }
 
 /* Medium devices (desktops, 992px and up) */

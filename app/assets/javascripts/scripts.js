@@ -5,7 +5,7 @@ $(function() {
   });
 
   $(".flash").delay(1500).animate({
-    top: "-26",
+    top: "-1.83em",
   }, 900, "easeOutBounce" );
 
   $(document).on("page:change", function() {
