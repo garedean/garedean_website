@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order(created_at: :desc)
   end
 
   def new
@@ -12,7 +12,6 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      binding.pry
       redirect_to blogs_path, notice: "Post added!"
     else
       render :new

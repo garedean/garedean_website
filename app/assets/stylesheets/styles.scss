@@ -109,7 +109,6 @@ ul {
   border-radius: 100%;
   background: transparent image-url("portrait_1") center top no-repeat;
   background-size: cover;
-  transition: background-image .2s;
   &:hover {
     background-image: image-url("portrait_2");
   }
