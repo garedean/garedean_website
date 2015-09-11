@@ -52,6 +52,15 @@
   img {
     width: 100%;
     border: 1px solid #e3e3e3;
+    transition: transform .25s, box-shadow .25s;
+    &:hover {
+      transform: scale(1.0007, 1.007);
+      box-shadow: 0 0 8px 0 #aaa;
+    }
+  }
+  #potluck_app {
+    border: 0;
+    border-radius: 35px;
   }
   .project-screenshot {
     margin-bottom: 25px;
@@ -61,7 +70,7 @@
     text-align: justify;
     line-height: 1.2em;
     font-weight: 400;
-    h4 {
+    h3 {
       margin-top: 0;
       margin-bottom: 20px;
     }

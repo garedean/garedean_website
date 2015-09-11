@@ -17,5 +17,6 @@
  *= require projects
  *= require static_pages
  *= require resume
+ *= require about
  *= require styles
  */
