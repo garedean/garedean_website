@@ -46,6 +46,9 @@
 }
 
 #project-tiles-wrapper {
+  .row {
+    margin: 50px 0;
+  }
   hr {
     margin: 35px 0;
   }
@@ -60,18 +63,19 @@
   }
   #potluck_app {
     border: 0;
-    border-radius: 40px;
+    border-radius: 32px;
   }
   .project-screenshot {
     margin-bottom: 25px;
   }
   .project-details {
     font-size: .8em;
-    line-height: 1.2em;
+    line-height: 1.7em;
     font-weight: 400;
     h3 {
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
     }
     p {
       margin: 0;
