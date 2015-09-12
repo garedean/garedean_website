@@ -4,10 +4,27 @@
   </h1>
 </header>
 
-<p class="text-justify">This page lists a few things previous coworkers have said about me. These were submitted <i>anonymously</i> during annual 360 performance reviews by project managers, developers, and QA professionals.</p>
+<p class="text-justify">Below is some of the feedback I've received from previous project managers, developers, and QA professionals I've worked with. These were submitted <i>anonymously</i> during annual 360 performance reviews.</p>
 
-<hr>
+<div id="endorsements-list">
 
+    <% @endorsements.each_with_index do |endorsement, index| %>
+      <div class="row clearfix">
+        <div class="endorsement col-md-8 ">
+          <%= endorsement.quote %>
+        </div>
+      </div>
+
+      <% if false %>
+        <li id="endorsement_<%= endorsement.id %>">
+          <%= endorsement.quote %>
+        </li>
+      <% end %>
+    <% end %>
+
+</div>
+
+<% if false %>
 <ul class="endorsements-list">
   <% for endorsement in @endorsements %>
     <li id="endorsement_<%= endorsement.id %>">
@@ -15,6 +32,8 @@
     </li>
   <% end %>
 </ul>
+<% end %>
+
 
 <% if admin? %>
   <footer>
