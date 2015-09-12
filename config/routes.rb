@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
 
-  root "static_pages#landing_page"
+  root "static_pages#about"
 
   resources :blogs
 
