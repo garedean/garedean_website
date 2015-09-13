@@ -39,9 +39,8 @@ a {
 
 nav {
   position: fixed;
-  left: 0;
-  width: 180px;
-  height: 100vh;
+  top:0;left:0;bottom:0;
+  background-color: white;
   border-right: 1px solid #e3e3e3;
   padding-top: 30px;
   font-size: 1.2em;
@@ -59,16 +58,6 @@ nav {
     font-weight: 300;
     font-size: 2.5em;
   }
-}
-
-.content-container {
-  height: 100%;
-  line-height: 1.5em;
-  margin-left: 180px;
-  padding-top: 30px;
-  padding-bottom: 100px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 ul {
@@ -100,16 +89,12 @@ ul {
   margin-bottom: 20px;
 }
 
-.link-list {
-  padding-left: 20px;
-}
-
-.link-list li {
+.nav-links li {
   list-style-type: none;
   margin-left: 0;
 }
 
-.gravatar {
+.portrait {
   height: 6em;
   width: 6em;
   display: block;
@@ -134,83 +119,6 @@ p.comment-author {
 
 hr {
   border-top-color: #e3e3e3;
-}
-
-/* Landing Page */
-/* ---------------------------------------------*/
-
-.backdrop {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-image: image-url("woods_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.overlay {
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-image: image-url("screen_overlay.png");
-  background-repeat: repeat;
-  background-color: rgba(0,0,0,0.1);
-  height: 100%;
-}
-
-.name-stamp {
-  position: absolute;
-  bottom: 0px;
-  right: 25px;
-  font-size: 75px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.clip-circle {
-  height: 100%;
-  background: white;
-  -webkit-clip-path: circle(19px at left 35px top 35px);
-}
-
-.clip-circle.expanded {
-  -webkit-clip-path: circle(150% at left 35px top 35px);
-
-  -webkit-transition: all 1700ms cubic-bezier(0.080, 0.645, 0.270, 0.975);
-     -moz-transition: all 1700ms cubic-bezier(0.080, 0.645, 0.270, 0.975);
-       -o-transition: all 1700ms cubic-bezier(0.080, 0.645, 0.270, 0.975);
-          transition: all 1700ms cubic-bezier(0.080, 0.645, 0.270, 0.975); /* custom */
-
-  -webkit-transition-timing-function: cubic-bezier(0.080, 0.645, 0.270, 0.975);
-     -moz-transition-timing-function: cubic-bezier(0.080, 0.645, 0.270, 0.975);
-       -o-transition-timing-function: cubic-bezier(0.080, 0.645, 0.270, 0.975);
-          transition-timing-function: cubic-bezier(0.080, 0.645, 0.270, 0.975); /* custom */
-}
-
-.glyphicon-menu-hamburger {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 10px;
-  font-size: 20px;
-  color: #555;
-  background-color: white;
-  z-index: 2;
-}
-
-.glyphicon-menu-hamburger:hover {
-  cursor: pointer;
-  color: #333;
-}
-
-.landing-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
 }
 
 .x-small {
@@ -401,7 +309,7 @@ textarea {
   right: 0;
   min-height: 4px;
   background-color: #0099cc;
-  z-index: 9998;
+  z-index: 9999;
 }
 
 .clickable {
@@ -416,6 +324,14 @@ textarea {
   background-size: 4px 4px;
   cursor: move;
   border: 1px solid #ddd;
+}
+
+#social-links-wrapper {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  font-size: .6em;
+  text-align: center;
+  margin-bottom: 7px;
 }
 
 /* Scroll Bar Styling
@@ -441,39 +357,6 @@ textarea {
 
 /* Media Queries */
 /* ---------------------------------------------*/
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 1030px) {
-  // .container {
-  //   width: 850px;
-  // }
-  // #resume-wrapper {
-  //   .company-name,
-  //   p.job-title {
-  //     margin-bottom: .6em;
-  //     font-weight: 600;
-  //   }
-  //   .col-md-4 {
-  //     span.job-title {
-  //       display: none;
-  //       font-weight: 600;
-  //     }
-  //   }
-  //   .col-md-8 {
-  //     p.job-title {
-  //       display: block;
-  //     }
-  //   }
-  // }
-}
-
-#social-links-wrapper {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  font-size: .6em;
-  text-align: center;
-  margin-bottom: 7px;
-}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -524,7 +407,7 @@ textarea {
   nav {
     width: 220px;
   }
-  .content-container {
+  #content-container {
     margin-left: 220px;
   }
   body {

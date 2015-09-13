@@ -18,4 +18,5 @@
  *= require static_pages
  *= require resume
  *= require styles
+*= require simple_sidebar
  */

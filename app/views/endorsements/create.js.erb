@@ -1,7 +1,7 @@
 $("#endorsements_form_wrapper").html("<%= escape_javascript(render('form')) %>");
 
 // Scroll page to bottom in order to show new endoresment test area
-$('.content-container').scrollTop(9999);
+$('#content-container').scrollTop(9999);
 
 //Initialize sortable functionality for endorsements. Railscasts Episode #147 Sortable Lists
 $("#sortable_elements_wrapper").sortable({axis: 'y'});

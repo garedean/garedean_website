@@ -1,9 +1,4 @@
 $(function() {
-  $(".glyphicon-menu-hamburger").click(function(){
-    $(this).hide();
-    $(this).parent().addClass("expanded");
-  });
-
   $(".flash").delay(1500).animate({
     top: "-1.83em",
   }, 900, "easeOutBounce" );

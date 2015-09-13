@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <%= favicon_link_tag 'favicon.ico' %>
     <title>Garrett Olson - Web Developer</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -17,6 +19,9 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
 
     <span class="edit-logout-links">
       <% if user_signed_in? %>
@@ -29,17 +34,23 @@
     <div class="top-stripe">
     </div>
 
-    <% flash.each do |key, value| %>
-      <%= content_tag :div, value, class: "flash #{key}" %>
-    <% end %>
+    <div id="content-container">
+      <%= render 'layouts/sidebar' %>
 
-    <%= render 'layouts/sidebar' %>
-
-    <div class="content-container">
       <div class="container">
+        <span class="menu-toggle glyphicon glyphicon-menu-hamburger"></span>
+
         <%= yield %>
       </div>
     </div>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $(".menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#content-container").toggleClass("nav-shown");
+    });
+    </script>
 
   </body>
 </html>
