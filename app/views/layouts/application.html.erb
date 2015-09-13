@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <%= favicon_link_tag 'favicon.ico' %>
     <title>Garrett Olson - Web Developer</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -12,16 +12,17 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
-
-    <style>
-      <%= yield(:custom_styles) %>
-    </style>
   </head>
 
   <body>
+
     <% flash.each do |key, value| %>
       <%= content_tag :div, value, class: "flash #{key}" %>
     <% end %>
+
+    <style type="text/css">
+      <%= yield(:custom_styles) %>
+    </style>
 
     <span class="edit-logout-links">
       <% if user_signed_in? %>

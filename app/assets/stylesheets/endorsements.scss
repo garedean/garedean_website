@@ -1,21 +1,20 @@
-.endorsements-list {
-  margin-top: 30px;
+#endorsements-list {
+  margin-top: 20px;
   font-style: italic;
   font-size: 1em;
   text-align: justify;
-  li {
+  .row {
     font-size: .9em;
-    padding: 10px;
-    width: 60%;
-    background: #FAFAFA;
-    margin: 20px 0;
-  }
-  li:nth-child(odd) {
-    text-align: left;
-  }
-  li:nth-child(even) {
-    margin-left: 40%;
-    text-align: right;
+    padding: 20px 0;
+    &:nth-child(odd) {
+      .endorsement {
+        float: right;
+      }
+    }
+    > div {
+      background: #FAFAFA;
+      width: 100%;
+    }
   }
 }
 
