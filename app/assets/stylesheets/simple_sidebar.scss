@@ -25,25 +25,19 @@
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 9998;
-  transition: all .3s;
   nav {
     left: -100%;
     width: 100%;
     overflow: hidden;
-    transition: all .3s;
   }
 }
 
 
 #content-container.nav-shown {
-  left: 100%;
-  right: -100%;
-  transition: all .3s;
   nav {
     width: 100vw;
     left: 0px;
     z-index: 9999 !important;
-    transition: all .3s;
     .nav-links {
       padding: 0;
     }
