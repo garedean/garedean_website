@@ -16,41 +16,47 @@
 
   <body>
 
-    <% flash.each do |key, value| %>
-      <%= content_tag :div, value, class: "flash #{key}" %>
-    <% end %>
-
     <style type="text/css">
       <%= yield(:custom_styles) %>
     </style>
 
-    <span class="edit-logout-links">
-      <% if user_signed_in? %>
-        ADMIN |
-        <%#= link_to 'Edit profile', edit_user_registration_path %>
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <div id="page-wrapper">
+
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
       <% end %>
-    </span>
 
-    <div class="top-stripe">
-    </div>
+      <span class="edit-logout-links">
+        <% if user_signed_in? %>
+          ADMIN |
+          <%#= link_to 'Edit profile', edit_user_registration_path %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% end %>
+      </span>
 
-    <div id="content-container">
+      <div class="top-stripe">
+      </div>
+
+      <a class="navicon-button x">
+        <div class="navicon"></div>
+      </a>
+
       <%= render 'layouts/sidebar' %>
 
-      <div class="container">
-        <span class="menu-toggle glyphicon glyphicon-menu-hamburger"></span>
+      <div id="content-container">
 
-        <%= yield %>
+        <div class="container">
+          <%= yield %>
+        </div>
       </div>
     </div>
 
     <!-- Menu Toggle Script -->
     <script>
-    $(".menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#content-container").toggleClass("nav-shown");
-    });
+      $(".navicon-button").click(function(){
+        $("#page-wrapper").toggleClass("nav-shown");
+        $(this).toggleClass("open");
+      });
     </script>
 
   </body>

@@ -1,0 +1,62 @@
+// Change to watch in slow motion
+$duration: .15s;
+
+.navicon-button {
+  display: inline-block;
+  position: fixed;
+  top:5px;right:5px;
+  padding: 35px 20px;
+  transition: $duration;
+  cursor: pointer;
+  user-select: none;
+  opacity: .8;
+  transform: scale(.8, .8);
+  z-index: 9999;
+
+  .navicon:before, .navicon:after {
+    transition: $duration;
+  }
+}
+
+.navicon {
+  position: relative;
+  width: 2.3em;
+  height: .2rem;
+  transition: $duration;
+  background: #000;
+
+  &:before, &:after {
+    display: block;
+    background: #000;
+    content: "";
+    height: .2rem;
+    width: 2.25rem;
+    position: absolute;
+    z-index: -1;
+    transition: $duration $duration;
+  }
+
+  &:before { top: .7rem; }
+  &:after { top: -.7rem; }
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+  top: 0 !important;
+}
+
+.open .navicon:before,
+.open .navicon:after {
+  transition: $duration;
+}
+
+/* × and + */
+.open.plus,
+.open.x {
+  .navicon {
+    background: transparent;
+
+    &:before { transform: rotate(-45deg); }
+    &:after { transform: rotate(45deg); }
+  }
+}

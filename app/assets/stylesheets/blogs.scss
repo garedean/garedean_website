@@ -1,3 +1,31 @@
 #new_comment {
   display: none;
 }
+
+.blogs-wrapper {
+  li {
+    margin: 30px 0;
+    a {
+      display: inline-block;
+      width: 100%;
+      span {
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+.article {
+  text-align: justify;
+}
+
+.input-group-addon {
+  border-radius: 0px;
+}
+
+p.comment-author {
+  font-size: .8em;
+  margin-bottom: 0px;
+}

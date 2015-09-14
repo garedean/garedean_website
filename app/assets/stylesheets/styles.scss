@@ -1,5 +1,16 @@
+/*
+ * Section 1 - Global Styles
+ * Section 2 - Page Structure
+ * CH04 - Header & Navigation
+ * CH05 - Content & Media
+ * CH06 - Footer
+ * CH07 - Miscellaneous
+ */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*--------------- Section 1 - Global Styles ---------------*/
 
 html,
 body {
@@ -12,44 +23,22 @@ body {
   overflow: hidden;
 }
 
-.container {
-  width: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
   color: #0099cc;
 }
 
 a {
   color: #0099cc;
-  &:focus, &:hover {
+  &:hover, &:focus {
+    color: #0099cc;
     outline: none;
     text-decoration: none;
     text-decoration: none;
   }
   &:hover {
     background: #f1f1f1;
-    color: #0099cc;
-  }
-  &:focus {
-    color: #0099cc;
-  }
-}
-
-nav {
-  position: fixed;
-  top:0;left:0;bottom:0;
-  background-color: white;
-  border-right: 1px solid #e3e3e3;
-  padding-top: 30px;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  a {
-    &.selected {
-      background: #f1f1f1;
-    }
   }
 }
 
@@ -67,27 +56,49 @@ ul {
   padding-start: 0px;
 }
 
-.blogs-wrapper {
-  li {
-    margin: 30px 0;
-    a {
-      display: inline-block;
-      width: 100%;
-      span {
-        &:last-child {
-          float: right;
-        }
-      }
+.navicon-button {
+  &:hover {
+    background: transparent;
+  }
+}
+
+/*--------------- Section 2 - Page Structure ---------------*/
+
+#content-container {
+  position: absolute;
+  top:0;right:0;bottom:0;left:0;
+  background-color: white;
+  line-height: 1.5em;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  overflow-y: scroll;
+  z-index: 9997;
+}
+
+nav {
+  position: fixed;
+  top:0;right:0;bottom:0;left:0;
+  text-align: center;
+  background-color: white;
+  padding-top: 30px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  z-index: 9996;
+  a {
+    &.selected {
+      background: #f1f1f1;
     }
   }
 }
 
-.article {
-  text-align: justify;
-}
-
-.page-header {
-  margin-bottom: 20px;
+#page-wrapper.nav-shown {
+  overflow: hidden;
+  nav {
+    z-index: 9998;
+    .nav-links {
+      padding: 0;
+    }
+  }
 }
 
 .nav-links li {
@@ -108,15 +119,12 @@ ul {
   }
 }
 
-
-.input-group-addon {
-  border-radius: 0px;
+/* Override Bootstrap media query that sets width on container at 768px; keep container at 100% width until 992px */
+.container {
+  width: initial;
 }
 
-p.comment-author {
-  font-size: .8em;
-  margin-bottom: 0px;
-}
+/*--------------- Section 3 - ************* ---------------*/
 
 hr {
   border-top-color: #e3e3e3;
@@ -335,6 +343,23 @@ textarea {
   margin-bottom: 7px;
 }
 
+.glyphicon-menu-hamburger,
+.glyphicon-remove {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: #555;
+  background-color: white;
+  z-index: 2;
+  &:hover {
+    cursor: pointer;
+    color: #333;
+  }
+}
+
 /* Scroll Bar Styling
 /* ---------------------------------------------*/
 
@@ -361,6 +386,28 @@ textarea {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .navicon-button {
+    display: none;
+  }
+  #content-container {
+    left: 180px !important;
+    overflow-y: scroll !important;
+  }
+  nav {
+    left: 0;
+    width: 180px !important;
+    border-right: 1px solid #e3e3e3;
+    .nav-links {
+      padding-left: 20px !important;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 930px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
