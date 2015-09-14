@@ -6,12 +6,16 @@ $duration: .15s;
   position: fixed;
   top:5px;right:5px;
   padding: 25px 10px;
+  background: white;
   transition: $duration;
   cursor: pointer;
   user-select: none;
-  opacity: .8;
   transform: scale(.8, .8);
   z-index: 9999;
+
+  &:hover {
+    background: white;
+  }
 
   .navicon:before, .navicon:after {
     transition: $duration;
@@ -23,11 +27,11 @@ $duration: .15s;
   width: 2.3em;
   height: .2rem;
   transition: $duration;
-  background: #000;
+  background: #222;
 
   &:before, &:after {
     display: block;
-    background: #000;
+    background: #222;
     content: "";
     height: .2rem;
     width: 2.25rem;
