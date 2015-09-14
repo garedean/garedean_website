@@ -106,10 +106,12 @@ nav {
   display: block;
   margin: 30px auto 50px auto;
   border-radius: 100%;
-  background: transparent image-url("portrait_1") center top no-repeat;
+  background: transparent image-url("portrait_sprite") center top no-repeat;
+  background-position: 0px 0px;
   background-size: cover;
   &:hover {
-    background-image: image-url("portrait_2");
+    background-position: 0px -148px;
+    background-size: cover;
   }
 }
 
@@ -462,5 +464,10 @@ textarea {
   }
   body {
     font-size: 1.2em;
+  }
+  .portrait {
+    &:hover {
+      background-position: 0px -177px;
+    }
   }
 }
