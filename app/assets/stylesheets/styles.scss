@@ -69,7 +69,7 @@ ul {
   top:0;right:0;bottom:0;left:0;
   background-color: white;
   line-height: 1.5em;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 100px;
   overflow-y: scroll;
   z-index: 9997;
@@ -390,6 +390,7 @@ textarea {
     display: none;
   }
   #content-container {
+    padding-top: 30px;
     left: 180px !important;
     overflow-y: scroll !important;
   }
