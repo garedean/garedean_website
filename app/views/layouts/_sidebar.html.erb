@@ -3,19 +3,19 @@
   <div class="portrait"></div>
 
   <ul class="nav-links">
-    <li>
-      <%= link_to 'About', about_path, class: "#{controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : ''}" %>
+    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
+      <%= link_to 'About', about_path %>
     </li>
-    <li>
-      <%= link_to 'Work', projects_path, class: "#{controller.class == ProjectsController ? 'selected' : ''}" %>
-    <li>
-      <%= link_to 'Journal', blogs_path, class: "#{controller.class == BlogsController ? 'selected' : ''}" %>
+    <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
+      <%= link_to 'Work', projects_path %>
+    <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
+      <%= link_to 'Journal', blogs_path %>
     </li>
+    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
+      <%= link_to 'Resumé', resume_path %>
     <li>
-      <%= link_to 'Resumé', resume_path, class: "#{controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : ''}" %>
-    <li>
-    <li>
-      <%= link_to 'References', endorsements_path, class: "#{controller.class == EndorsementsController ? 'selected' : ''}" %>
+    <li class="<%= controller.class == EndorsementsController ? 'selected' : '' %>">
+      <%= link_to 'References', endorsements_path %>
     </li>
   </ul>
 

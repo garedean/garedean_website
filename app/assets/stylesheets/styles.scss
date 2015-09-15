@@ -10,6 +10,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$brand-blue: #0099cc;
 /*--------------- Section 1 - Global Styles ---------------*/
 
 html,
@@ -26,13 +27,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
-  color: #0099cc;
+  color: $brand-blue;
 }
 
 a {
-  color: #0099cc;
+  color: $brand-blue;
   &:hover, &:focus {
-    color: #0099cc;
+    color: $brand-blue;
     outline: none;
     text-decoration: none;
     text-decoration: none;
@@ -78,9 +79,17 @@ nav {
   font-size: 1.2em;
   line-height: 1.5em;
   z-index: 9996;
-  a {
+  li {
+    color: #777;
     &.selected {
-      background: #f1f1f1;
+      color: $brand-blue;
+      font-weight: #555;
+    }
+    a {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
     }
   }
 }
@@ -131,7 +140,7 @@ hr {
 }
 
 a.buttonize {
-  border: 1px solid #0099cc;
+  border: 1px solid $brand-blue;
   padding: 2px 20px;
   margin: 10px;
   box-sizing: border-box;
@@ -213,7 +222,7 @@ input[type="submit"] {
   .edit {
     color: #84afd3;
     &:hover {
-      color: #0099cc;
+      color: $brand-blue;
     }
   }
   .delete {
@@ -247,7 +256,7 @@ input[type="submit"] {
   margin-bottom: 0;
   z-index: 9999;
   &.notice {
-    background: #0099cc;
+    background: $brand-blue;
   }
   &.alert {
     background: #ff4c4c;
@@ -292,7 +301,7 @@ input[type="submit"] {
 }
 
 span.linkify {
-  color: #0099cc;
+  color: $brand-blue;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -313,7 +322,7 @@ textarea {
   left: 0;
   right: 0;
   min-height: 4px;
-  background-color: #0099cc;
+  background-color: $brand-blue;
   z-index: 9999;
 }
 
@@ -366,7 +375,7 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #0099cc;
+    background: $brand-blue;
 }
 
 ::-webkit-scrollbar-corner {
@@ -395,8 +404,17 @@ textarea {
     width: 180px;
     border-right: 1px solid #e3e3e3;
     .nav-links {
-      padding-left: 20px !important;
       text-align: left;
+      li {
+        padding-left: 20px;
+        &:hover {
+          background: #f1f1f1;
+        }
+        &.selected {
+          padding-left: 16px;
+          border-left: 4px solid $brand-blue;
+        }
+      }
     }
   }
 }
