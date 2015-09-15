@@ -3,35 +3,20 @@
   <div class="portrait"></div>
 
   <ul class="nav-links">
-    <%= link_to about_path do %>
-      <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
-        About
-      </li>
-    <% end %>
-
-    <%= link_to projects_path do %>
-      <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
-        Work
-      </li>
-    <% end %>
-
-    <%= link_to blogs_path do %>
-      <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
-        Journal
-      </li>
-    <% end %>
-
-    <%= link_to resume_path do %>
-      <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
-        Resumé
-      </li>
-    <% end %>
-
-    <%= link_to endorsements_path do %>
-      <li class="<%= controller.class == EndorsementsController ? 'selected' : '' %>">
-        References
-      </li>
-    <% end %>
+    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
+      <%= link_to 'About', about_path %>
+    </li>
+    <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
+      <%= link_to 'Work', projects_path %>
+    <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
+      <%= link_to 'Journal', blogs_path %>
+    </li>
+    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
+      <%= link_to 'Resumé', resume_path %>
+    <li>
+    <li class="<%= controller.class == EndorsementsController ? 'selected' : '' %>">
+      <%= link_to 'References', endorsements_path %>
+    </li>
   </ul>
 
   <p id="social-links-wrapper">
