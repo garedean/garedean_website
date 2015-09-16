@@ -1,3 +1,5 @@
+$brand-blue: #0099cc;
+
 .references-wrapper {
   .references{
     width: 570px;
@@ -75,6 +77,52 @@
     }
     p {
       margin: 0;
+    }
+  }
+}
+
+
+
+.project-list {
+  > li {
+    position: relative;
+    .overlay {
+      display: none;
+    }
+    .edit-delete-wrapper {
+      visibility: hidden;
+    }
+    &:hover {
+      .edit-delete-wrapper {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.edit-delete-wrapper {
+  a {
+    opacity: initial;
+    &:hover {
+      background: none;
+    }
+  }
+  .edit {
+    color: #84afd3;
+    &:hover {
+      color: $brand-blue;
+    }
+  }
+  .delete {
+    color: #cb8e8d;
+    &:hover {
+      color: #a94442;
+    }
+  }
+  .go-to {
+    color: #8aac8a;
+    &:hover {
+      color: #3c763d;
     }
   }
 }

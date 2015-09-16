@@ -29,3 +29,17 @@ p.comment-author {
   font-size: .8em;
   margin-bottom: 0px;
 }
+
+.blog-comments-wrapper {
+  margin-top: 20px;
+  li {
+    padding: 5px 0;
+    border-top: 1px solid #e3e3e3;
+  }
+}
+
+.post-wrapper {
+  border-bottom: 3px double #e3e3e3;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
