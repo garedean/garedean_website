@@ -9,16 +9,16 @@
 
     <%= resume_block do %>
       <%= left_column("KINDMIND",
-                      "Founder & Principle Developer",
+                      "Founder & Principle Web Developer",
                       "Portland, OR",
                       "2014 – Present") %>
 
       <%= right_column do %>
-        <%= job_title("Founder & Principle Developer") %>
+        <%= job_title("Founder & Principle Web Developer") %>
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            Visionary for the KindMind brand and product: <i>using technology to improve the mental health and wellness of the world</i>
+            <%= link_to "KindMind", "http://www.kindmind.com", target: "_blank" %> brings leading mental health tools to the web toward achieving its mission: <i>u​sing technology to improve the mental health and wellness of the world</i>
           <% end %>
 
           <%= bullet_point do %>
@@ -36,14 +36,18 @@
 
     <%= resume_block do %>
       <%= left_column("EyeCue Lab",
-                      "Full Stack Web Developer Intern",
+                      "Full Stack Web Developer",
                       "Portland, OR",
-                      "Jul 2015 - Sept 2014") %>
+                      "Jul 2015 - Sept 2015") %>
 
       <%= right_column do %>
-        <%= job_title("Full Stack Web Developer Intern") %>
+        <%= job_title("Full Stack Web Developer") %>
 
         <%= position_highlights do %>
+
+          <%= bullet_point do %>
+            As part of the Epicodus curriculum, I spent five weeks working with <%= link_to "EyeCue Lab", "http://www.eyecuelab.com/", target: "_blank" %>, a Portland web development agency
+          <% end %>
 
           <%= bullet_point do %>
             Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
