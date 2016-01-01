@@ -8,9 +8,9 @@
     </li>
     <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
       <%= link_to 'Work', projects_path %>
-    <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
-      <%= link_to 'Journal', blogs_path %>
-    </li>
+    <!-- <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
+      <%#= link_to 'Journal', blogs_path %>
+    </li> -->
     <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
       <%= link_to 'Resumé', resume_path %>
     <li>

@@ -8,17 +8,43 @@
     <h2>Experience</h2>
 
     <%= resume_block do %>
+      <%= left_column("RUMBLEFISH",
+                      "Software Engineer",
+                      "Portland, OR",
+                      "October 2015 – Present") %>
+
+      <%= right_column do %>
+        <%= job_title("Software Engineer") %>
+
+        <%= position_highlights do %>
+          <%= bullet_point do %>
+            As a Software Engineer at RumbleFish, I work on a codebase that helps musicians license and share their music on the web.
+          <% end %>
+
+          <%= bullet_point do %>
+            Worked extensively with Ruby, XML parsing and transformation, and publish/subscribe messaging via RabbitMQ
+          <% end %>
+
+          <%= bullet_point do %>
+            Practiced test driven development toward continuous integration
+          <% end %>
+        <% end %>
+
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
       <%= left_column("KINDMIND",
-                      "Founder & Principle Web Developer",
+                      "Founder & Developer",
                       "Portland, OR",
                       "2014 – Present") %>
 
       <%= right_column do %>
-        <%= job_title("Founder & Principle Web Developer") %>
+        <%= job_title("Founder & Full Stack Developer") %>
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            <%= link_to "KindMind", "http://www.kindmind.com", target: "_blank" %> brings leading mental health tools to the web toward achieving its mission: <i>u​sing technology to improve the mental health and wellness of the world</i>
+            <%= link_to "KindMind", "http://www.kindmind.com", target: "_blank" %>, along with sister product, <%= link_to "KindJournal", "http://www.kindjournal.com", target: "_blank" %>, brings leading mental health tools to the web toward achieving its mission: <i>u​sing technology to improve the mental health and wellness of the world</i>
           <% end %>
 
           <%= bullet_point do %>
@@ -31,33 +57,6 @@
           <% end %>
         <% end %>
 
-      <% end %>
-    <% end %>
-
-    <%= resume_block do %>
-      <%= left_column("EyeCue Lab",
-                      "Full Stack Web Developer",
-                      "Portland, OR",
-                      "Jul 2015 - Sept 2015") %>
-
-      <%= right_column do %>
-        <%= job_title("Full Stack Web Developer") %>
-
-        <%= position_highlights do %>
-
-          <%= bullet_point do %>
-            As part of the Epicodus curriculum, I spent five weeks working with <%= link_to "EyeCue Lab", "http://www.eyecuelab.com/", target: "_blank" %>, a Portland web development agency
-          <% end %>
-
-          <%= bullet_point do %>
-            Developed a mobile web app that helps a Portland food charity feed 600 people each week through better inventory management
-          <% end %>
-
-          <%= bullet_point do %>
-            Created functional wireframe prototypes for 30 workflows before development began in order to validate the user experience
-          <% end %>
-
-        <% end %>
       <% end %>
     <% end %>
 
@@ -183,11 +182,11 @@
 
     <%= resume_block do %>
       <%= left_column("Epicodus",
-                      "Software Development, Graduate",
+                      "Software Development Trade School, Graduate",
                       "Portland, OR", "Apr 2015 — Sept 2015") %>
 
       <%= right_column do %>
-        <%= job_title("Software Development, Graduate") %>
+        <%= job_title("Software Development Trade School, Graduate") %>
 
         <%= position_highlights do %>
           <%= bullet_point do %>
@@ -209,7 +208,7 @@
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            My focus within the Business program was on entrepreneurship and overall business management.
+            Concentration: entrepreneurship & business management.
           <% end %>
         <% end %>
       <% end %>
