@@ -2,6 +2,14 @@
 
   <div class="portrait"></div>
 
+  <p class="sidebar-name">
+    Garrett Olson
+  </p>
+
+  <p class="sidebar-summary">
+    Software Developer. Ruby.
+  </p>
+
   <ul class="nav-links">
     <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
       <%= link_to 'About', about_path %>
@@ -19,9 +27,17 @@
     </li>
   </ul>
 
-  <p id="social-links-wrapper">
-    <%= link_to "LinkedIn", "https://www.linkedin.com/in/garrettdeanolson", target: "_blank" %> |
-    <%= link_to "Github", "https://github.com/garedean", target: "_blank" %> |
-    <%= mail_to "garrett.olson@kindmind.com", "Email" %>
-  </p>
+  <div id="follow-icons">
+    <%= link_to "https://github.com/garedean", target: "_blank" do %>
+      <i class="fa fa-github-square fa-2x"></i>
+    <% end %>
+
+    <%= link_to "https://www.linkedin.com/in/garrettdeanolson", target: "_blank" do %>
+      <i class="fa fa-linkedin-square fa-2x"></i>
+    <% end %>
+
+    <%= mail_to "garrett.olson@kindmind.com" do %>
+      <i class="fa fa-envelope-square fa-2x"></i>
+    <% end %>
+  </div>
 </nav>

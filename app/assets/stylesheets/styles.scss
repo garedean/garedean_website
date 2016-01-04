@@ -124,7 +124,7 @@ a.buttonize {
 
 footer {
   position: fixed;
-  bottom: 0; left: 180px; right: 0;
+  bottom: 0; left: 220px; right: 0;
   background: white;
   border-top: 1px solid #e3e3e3;
   height: 50px;
@@ -213,14 +213,6 @@ textarea {
   border: 1px solid #ddd;
 }
 
-#social-links-wrapper {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  font-size: .6em;
-  text-align: center;
-  margin-bottom: 7px;
-}
-
 .glyphicon-menu-hamburger,
 .glyphicon-remove {
   display: block;
@@ -235,6 +227,41 @@ textarea {
   &:hover {
     cursor: pointer;
     color: #333;
+  }
+}
+
+.sidebar-name {
+  font-size: 2em;
+  font-weight: 600;
+  color: #444;
+  padding-left: 16px;
+  line-height: 1em;
+  margin-bottom: 7px;
+}
+
+.sidebar-summary {
+  font-size: .8em;
+  padding-left: 16px;
+  margin-bottom: 30px;
+}
+
+#follow-icons {
+  position: absolute;
+  right: 0;bottom: 5px;left:0;
+  text-align: center;
+  .fa {
+    color: #ddd;
+    font-size: 1.5em;
+    &.fa-linkedin-square,
+    &.fa-envelope-square {
+      margin-left: 18px;
+    }
+    &:hover {
+      color: #08c;
+    }
+  }
+  a:hover {
+    background: initial;
   }
 }
 
@@ -254,11 +281,12 @@ textarea {
 nav {
   position: fixed;
   top:0;right:0;bottom:0;left:0;
-  text-align: center;
+  text-align: left;
   background-color: white;
   padding-top: 30px;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.5em;
+  text-align: center;
   z-index: 9996;
   li {
     color: #777;
@@ -292,18 +320,14 @@ nav {
 }
 
 .portrait {
-  height: 6em;
-  width: 6em;
+  height: 7.7em;
+  width: 7.7em;
   display: block;
   margin: 30px auto 50px auto;
   border-radius: 100%;
   background: transparent image-url("portrait_sprite") center top no-repeat;
   background-position: 0px 0px;
   background-size: cover;
-  &:hover {
-    background-position: 0px -148px;
-    background-size: cover;
-  }
 }
 
 /* Override Bootstrap media query that sets width on container at 768px; keep container at 100% width until 992px */
@@ -339,13 +363,14 @@ nav {
   }
   #content-container {
     padding-top: 30px;
-    left: 180px !important;
+    left: 220px !important;
     overflow-y: scroll !important;
   }
   nav {
     left: 0;
-    width: 180px;
+    width: 200px;
     border-right: 1px solid #e3e3e3;
+    text-align: left;
     .nav-links {
       text-align: left;
       li {
@@ -359,6 +384,9 @@ nav {
         }
       }
     }
+  }
+  .sidebar-name {
+    font-size: 1.3em;
   }
 }
 
@@ -420,9 +448,6 @@ img#potluck_app {
 }
 /* Extra Large Screens (large desktops, 1800px and up) */
 @media (min-width: 1800px) {
-  nav {
-    width: 220px;
-  }
   #content-container {
     left: 220px !important;
   }
