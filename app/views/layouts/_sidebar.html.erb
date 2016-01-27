@@ -1,43 +1,46 @@
-<nav id="sidebar-wrapper">
-
+<div class="sidebar">
   <div class="portrait"></div>
 
-  <p class="sidebar-name">
-    Garrett Olson
-  </p>
+  <div class="content-wrapper">
+    <p class="sidebar-name">
+      Garrett Olson
+    </p>
 
-  <p class="sidebar-summary">
-    Software Developer. Ruby.
-  </p>
+    <p class="sidebar-summary">
+      Software Developer. Ruby.
+    </p>
 
-  <ul class="nav-links">
-    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
-      <%= link_to 'About', about_path %>
-    </li>
-    <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
-      <%= link_to 'Work', projects_path %>
-    <!-- <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
-      <%#= link_to 'Journal', blogs_path %>
-    </li> -->
-    <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
-      <%= link_to 'Resumé', resume_path %>
-    <li>
-    <li class="<%= controller.class == EndorsementsController ? 'selected' : '' %>">
-      <%= link_to 'References', endorsements_path %>
-    </li>
-  </ul>
+    <div id="follow-icons">
+      <%= link_to "https://github.com/garedean", target: "_blank" do %>
+        <i class="fa fa-github-square fa-2x"></i>
+      <% end %>
 
-  <div id="follow-icons">
-    <%= link_to "https://github.com/garedean", target: "_blank" do %>
-      <i class="fa fa-github-square fa-2x"></i>
-    <% end %>
+      <%= link_to "https://www.linkedin.com/in/garrettdeanolson", target: "_blank" do %>
+        <i class="fa fa-linkedin-square fa-2x"></i>
+      <% end %>
 
-    <%= link_to "https://www.linkedin.com/in/garrettdeanolson", target: "_blank" do %>
-      <i class="fa fa-linkedin-square fa-2x"></i>
-    <% end %>
+      <%= mail_to "garrett.olson@kindmind.com" do %>
+        <i class="fa fa-envelope-square fa-2x"></i>
+      <% end %>
+    </div>
 
-    <%= mail_to "garrett.olson@kindmind.com" do %>
-      <i class="fa fa-envelope-square fa-2x"></i>
-    <% end %>
+    <nav>
+      <ul class="nav-links">
+        <li class="<%= controller.class == StaticPagesController && controller.action_name == 'about' ? 'selected' : '' %>">
+          <%= link_to 'About', about_path %>
+        </li>
+        <li class="<%= controller.class == ProjectsController ? 'selected' : '' %>">
+          <%= link_to 'Work', projects_path %>
+        <!-- <li class="<%= controller.class == BlogsController ? 'selected' : '' %>">
+          <%#= link_to 'Journal', blogs_path %>
+        </li> -->
+        <li class="<%= controller.class == StaticPagesController && controller.action_name == 'resume' ? 'selected' : '' %>">
+          <%= link_to 'Resumé', resume_path %>
+        <li>
+        <li class="<%= controller.class == EndorsementsController ? 'selected' : '' %>">
+          <%= link_to 'References', endorsements_path %>
+        </li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</div>

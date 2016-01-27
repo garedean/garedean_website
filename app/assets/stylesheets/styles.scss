@@ -236,25 +236,24 @@ textarea {
   color: #444;
   padding-left: 16px;
   line-height: 1em;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .sidebar-summary {
-  font-size: .8em;
+  font-size: .7em;
   padding-left: 16px;
-  margin-bottom: 30px;
+  margin-bottom: -5px;
 }
 
 #follow-icons {
-  position: absolute;
-  right: 0;bottom: 5px;left:0;
-  text-align: center;
+  padding-left: 16px;
+  margin-bottom: 30px;
   .fa {
     color: #ddd;
-    font-size: 1.5em;
+    font-size: 1.2em;
     &.fa-linkedin-square,
     &.fa-envelope-square {
-      margin-left: 18px;
+      margin-left: 5px;
     }
     &:hover {
       color: #08c;
@@ -278,7 +277,7 @@ textarea {
   z-index: 9997;
 }
 
-nav {
+.sidebar {
   position: fixed;
   top:0;right:0;bottom:0;left:0;
   text-align: left;
@@ -306,7 +305,7 @@ nav {
 
 #page-wrapper.nav-shown {
   overflow: hidden;
-  nav {
+  .sidebar {
     z-index: 9998;
     .nav-links {
       padding: 0;
@@ -366,7 +365,7 @@ nav {
     left: 220px !important;
     overflow-y: scroll !important;
   }
-  nav {
+  .sidebar {
     left: 0;
     width: 200px;
     border-right: 1px solid #e3e3e3;
