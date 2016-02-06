@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, :skip => :registrations
+
+  get '/about',      to: 'static_pages#about'
+  get '/blog',       to: 'static_pages#blog'
+  get '/resume',     to: 'static_pages#resume'
+  get '/hey-there',  to: 'static_pages#hey_there'
+
   as :user do
     get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
@@ -22,8 +28,4 @@ Rails.application.routes.draw do
       put :update_multiple
     end
   end
-
-  get '/about',      to: 'static_pages#about'
-  get '/blog',       to: 'static_pages#blog'
-  get '/resume',     to: 'static_pages#resume'
 end
