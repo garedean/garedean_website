@@ -4,7 +4,7 @@
   </h1>
 </header>
 
-<p class="text-justify">Below is feedback I've received from previous project managers, software engineers, and QA professionals I've worked with. These were submitted <i>anonymously</i> during annual 360 performance reviews.</p>
+<p class="text-justify">Below are 'snippets' of feedback I've received from managers, software engineers, and QA professionals I've worked with. Most of these were submitted <i>anonymously</i> during annual 360 performance reviews, though some are taken from LinkedIn recommendations or past performance reviews.</p>
 
 <div id="endorsements-list">
 
@@ -14,26 +14,9 @@
           <%= endorsement.quote %>
         </div>
       </div>
-
-      <% if false %>
-        <li id="endorsement_<%= endorsement.id %>">
-          <%= endorsement.quote %>
-        </li>
-      <% end %>
     <% end %>
 
 </div>
-
-<% if false %>
-<ul class="endorsements-list">
-  <% for endorsement in @endorsements %>
-    <li id="endorsement_<%= endorsement.id %>">
-      <%= endorsement.quote %>
-    </li>
-  <% end %>
-</ul>
-<% end %>
-
 
 <% if admin? %>
   <footer>
