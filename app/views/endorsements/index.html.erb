@@ -4,18 +4,16 @@
   </h1>
 </header>
 
-<p class="text-justify">Below are 'snippets' of feedback I've received from managers, software engineers, and QA professionals I've worked with. Most of these were submitted <i>anonymously</i> during annual 360 performance reviews, though some are taken from LinkedIn recommendations or past performance reviews.</p>
+<p class="text-justify">Below are snippets of feedback I've received from managers, software engineers, and QA professionals I've worked with. Most of these were submitted <i>anonymously</i> during annual 360 performance reviews, though some are taken from LinkedIn recommendations or past performance reviews.</p>
 
 <div id="endorsements-list">
-
-    <% @endorsements.each_with_index do |endorsement, index| %>
-      <div class="row clearfix">
-        <div class="endorsement col-md-8 ">
-          <%= endorsement.quote %>
-        </div>
+  <% @endorsements.each_with_index do |endorsement, index| %>
+    <div class="row clearfix">
+      <div class="endorsement col-md-8 ">
+        <%= endorsement.quote %>
       </div>
-    <% end %>
-
+    </div>
+  <% end %>
 </div>
 
 <% if admin? %>

@@ -6,6 +6,9 @@
   .row {
     font-size: .9em;
     padding: 20px 0;
+    .endorsement {
+      padding: 15px 30px;
+    }
     &:nth-child(odd) {
       .endorsement {
         float: right;

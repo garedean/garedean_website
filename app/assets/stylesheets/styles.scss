@@ -46,7 +46,7 @@ $brand-blue: #0099cc;
   margin: 0;
   line-height: 2em;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: white;
   padding: 0;
   border: none;
@@ -392,7 +392,7 @@ textarea {
     }
   }
   .sidebar-name {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 
@@ -460,9 +460,15 @@ img#potluck_app {
   body {
     font-size: 1.2em;
   }
+  .sidebar {
+    width: 220px;
+  }
   .portrait {
-    &:hover {
-      background-position: 0px -177px;
-    }
+    height: 6.5em;
+    width: 6.5em;
+    margin: 35px auto 55px;
+  }
+  .container {
+    width: 950px;
   }
 }
