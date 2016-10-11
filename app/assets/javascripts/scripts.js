@@ -3,13 +3,11 @@ $(function() {
     top: "-1.83em",
   }, 900, "easeOutBounce" );
 
-  $(document).on("page:change", function() {
+  $(document).on("turbolinks:load", function() {
     autosize($('textarea'));
-	});
-});
 
-$(document).on("page:change", function() {
-  $('#submit-form-link').click(function() {
-    $('form').submit();
-  });
+    $('#submit-form-link').click(function() {
+      $('form').submit();
+    });
+	});
 });
