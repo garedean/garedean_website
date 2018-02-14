@@ -14,11 +14,9 @@
  *= require rails_bootstrap_forms
  *= require blogs
  *= require endorsements
- *= require projects
  *= require static_pages
  *= require resume
  *= require menu_icon_styles
  *= require styles
  *= require about
- *= require hey_there
  */

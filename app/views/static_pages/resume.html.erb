@@ -8,25 +8,51 @@
     <h2>Experience</h2>
 
     <%= resume_block do %>
-      <%= left_column("RUMBLEFISH",
+      <%= left_column("Renew Financial",
                       "Software Engineer",
                       "Portland, OR",
-                      "October 2015 – Present") %>
+                      "February 2017 – Present") %>
 
       <%= right_column do %>
         <%= job_title("Software Engineer") %>
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            As a Software Engineer at RumbleFish, I design, develop, and maintain code bases that generally query, process, or upload large amounts of data
+            Guided technical direction as Tech Lead for a 7-person Scrum team
           <% end %>
 
           <%= bullet_point do %>
-            Worked extensively with Ruby object oriented design and development, RabbitMQ messaging, and AWS servers and infrastructure
+            Daily full-stack contributor to a large microservice-oriented Ruby on Rails application transitioning over to a React/Redux front end
           <% end %>
 
           <%= bullet_point do %>
-            Practiced consistent test driven development toward 100% code coverage
+            Redesigned and replaced a Java microservice with Ruby, removing a key dependency from our application
+          <% end %>
+        <% end %>
+
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
+      <%= left_column("RUMBLEFISH",
+                      "Software Engineer",
+                      "Portland, OR",
+                      "October 2015 – February 2017") %>
+
+      <%= right_column do %>
+        <%= job_title("Software Engineer") %>
+
+        <%= position_highlights do %>
+          <%= bullet_point do %>
+            Lead a small team of engineers over a 12 month period that designed and implemented a massively scalable Ruby application for processing music royalties
+          <% end %>
+
+          <%= bullet_point do %>
+            Our solution outperformed the Java program it replaced by a factor of 20 (royalties processed per minute) while reducing 'false positive' royalty payments from 10% to 1%
+          <% end %>
+
+          <%= bullet_point do %>
+            Worked extensively with Ruby, RabbitMQ, Capistrano, Amazon CloudSearch, and AWS servers and infrastructure
           <% end %>
         <% end %>
 
@@ -44,16 +70,15 @@
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            <%= link_to "KindMind", "http://www.kindmind.com", target: "_blank" %> brings leading mental health tools to the web toward achieving its mission: <i>u​sing technology to improve the mental health and wellness of the world</i>
+            <%= link_to "KindMind", "http://www.kindmind.com", target: "_blank" %> is a delightfully simple online journal focusing on the mental health and wellness benefits of journaling.
           <% end %>
 
           <%= bullet_point do %>
-            Implemented all aspects of site functionality: landing page, site tours, user authentication, and innovative tools used for journaling and examining
-      thought patterns
+            Implemented all aspects of design, testing, site functionality, and iterative improvement
           <% end %>
 
           <%= bullet_point do %>
-            Launched sister product, <%= link_to "KindJournal", "http://www.kindjournal.com", target: "_blank" %>, in early 2016. KindJournal is an online journaling app that focuses on <i>expressive writing</i> as a form of therapy
+            Currently moving the front end to React backed by Redux
           <% end %>
 
           <%= bullet_point do %>
@@ -76,22 +101,16 @@
         <%= position_highlights do %>
 
           <%= bullet_point do %>
-            Designed, developed, and implemented three web browser automation frameworks in C# and Ruby that reduced manual QA test times by
-            a factor of 40 while improving overall test consistency
+            Designed and implemented three web browser automation frameworks in C# and Ruby capable of reducing eight hours of manual QA testing to 10 minutes
           <% end %>
 
           <%= bullet_point do %>
-            Introduced automated testing to the MINDBODY Merchant Account Processing development team ensuring over $1 billion in annual credit card transactions were processed accurately
+            Introduced automated testing to the MINDBODY Merchant Account Processing team ensuring over $1 billion in annual credit card transactions were accurately processed
           <% end %>
 
           <%= bullet_point do %>
-            As Scrum Master, lead two Scrum teams and 16 professionals toward agile development practices, planned and facilitated team meetings, served as the voice of the team to management
+            Led two Scrum teams and 16 professionals during the largest product redesign in MINDBODY's history over a six month period
           <% end %>
-
-          <%= bullet_point do %>
-            Served as Scrum Master for the most significant product redesign in the company’s history over a six month period
-          <% end %>
-
         <% end %>
       <% end %>
     <% end %>
@@ -123,60 +142,6 @@
       <% end %>
     <% end %>
 
-    <%= resume_block do %>
-      <%= left_column("Target",
-                      "Front End Team Leader",
-                      "San Luis Obispo, CA",
-                      "Jan 2011 – Jun 2011)") %>
-
-      <%= right_column do %>
-        <%= job_title("Front End Team Leader") %>
-
-        <%= position_highlights do %>
-
-          <%= bullet_point do %>
-            Managed 50 team members, two supervisors, and four departments in a store producing $30 million in annual revenue
-          <% end %>
-
-          <%= bullet_point do %>
-            Promoted a 'fast and friendly' culture to best serve our guests and a positive, upbeat work environment for team members
-          <% end %>
-
-          <%= bullet_point do %>
-            Interviewed and trained new hires
-          <% end %>
-
-        <% end %>
-      <% end %>
-    <% end %>
-
-    <%= resume_block do %>
-      <%= left_column("Target",
-                      "Assets Protection Leader",
-                      "San Luis Obispo, CA",
-                      "2010 – 2011") %>
-
-      <%= right_column do %>
-        <%= job_title("Assets Protection Leader") %>
-
-        <%= position_highlights do %>
-
-          <%= bullet_point do %>
-            Lead all asset-protection/loss-prevention activities in a 240-person store toward minimizing company losses
-          <% end %>
-
-          <%= bullet_point do %>
-            Ran weekly team 'huddles' to motivate and educate store team members about minimizing company losses, primarily through theft prevention
-          <% end %>
-
-          <%= bullet_point do %>
-            Managed a complex network of 60 cameras and camera server infastructure
-          <% end %>
-
-        <% end %>
-      <% end %>
-    <% end %>
-
   </section>
 
   <hr>
@@ -194,7 +159,7 @@
 
         <%= position_highlights do %>
           <%= bullet_point do %>
-            At Epicodus, I spent eight hours a day for 18 weeks learning some of the web's latest frameworks, technologies, and practices
+            Epicodus helped me transition from QA Engineer to Software Engineer. While there, I spent eight hours a day for around 18 weeks learning some of the web's latest frameworks, technologies, and practices
           <% end %>
         <% end %>
 
@@ -255,8 +220,8 @@
   <hr>
 
   <section>
-    <h2>Languages and Technologies</h2>
+    <h2>Favorite Technologies</h2>
 
-    Ruby, Rails, RSpec, Javascript & jQuery, PostGres, SQL, Active Record, Git, Selenium, Capybara, Cucumber, HTML, CSS
+    Ruby, Rails, React, Redux, RSpec, PostGres
   </section>
 </div>
