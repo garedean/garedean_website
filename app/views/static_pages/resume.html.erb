@@ -8,10 +8,28 @@
     <h2>Experience</h2>
 
     <%= resume_block do %>
+      <%= left_column("New Relic",
+                      "Software Engineer",
+                      "Portland, OR",
+                      "January 2019 – Present") %>
+
+      <%= right_column do %>
+        <%= job_title("Software Engineer") %>
+
+        <%= position_highlights do %>
+          <%= bullet_point do %>
+            I work on the Product and Subscription Services team at New Relic, driving changes and improvements that allow our product to be purchased and used by over 17,000 customers. Mostly backend Ruby and Rails with the occasionally dip into React and Redux-land (squeals of delight)
+          <% end %>
+        <% end %>
+
+      <% end %>
+    <% end %>
+
+    <%= resume_block do %>
       <%= left_column("Renew Financial",
                       "Software Engineer",
                       "Portland, OR",
-                      "February 2017 – Present") %>
+                      "February 2017 – December 2018") %>
 
       <%= right_column do %>
         <%= job_title("Software Engineer") %>
